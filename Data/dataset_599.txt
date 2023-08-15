@@ -1,0 +1,4996 @@
+# दो नंबर जोड़ने के लिए एक पायथन प्रोग्राम लिखें
+num1 = 1.5
+num2 = 6.3
+sum = num1 + num2
+print(f'Sum: {sum}')
+
+
+# उपयोगकर्ता द्वारा प्रदान की गई दो संख्याओं को जोड़ने और योग वापस करने के लिए एक पायथन फ़ंक्शन लिखें
+def add_two_numbers(num1, num2):
+    sum = num1 + num2
+    return sum
+
+
+# तीन संख्याओं में से सबसे बड़ी संख्या को खोजने और प्रिंट करने के लिए एक प्रोग्राम लिखें
+
+num1 = 10
+num2 = 12
+num3 = 14
+if (num1 >= num2) and (num1 >= num3):
+   largest = num1
+elif (num2 >= num1) and (num2 >= num3):
+   largest = num2
+else:
+   largest = num3
+print(f'largest:{largest}')
+
+
+# तीन संख्याओं में से सबसे छोटी संख्या को खोजने और प्रिंट करने के लिए एक प्रोग्राम लिखें
+num1 = 10
+num2 = 12
+num3 = 14
+if (num1 <= num2) and (num1 <= num3):
+   smallest = num1
+elif (num2 <= num1) and (num2 <= num3):
+   smallest = num2
+else:
+   smallest = num3
+print(f'smallest:{smallest}')
+
+
+# दी गई दो सूचियों को एक में मर्ज करने के लिए एक पायथन फ़ंक्शन लिखें
+def merge_lists(l1, l2):
+    return l1 + l2
+
+
+# कोई संख्या अभाज्य है या नहीं, यह जाँचने के लिए एक प्रोग्राम लिखिए
+num = 337
+
+if num > 1:
+   for i in range(2, num//2 + 1):
+       if (num % i) == 0:
+           print(num,"is not a prime number")
+           print(f"{i} times {num//i} is {num}")
+           break
+   else:
+       print(f"{num} is a prime number")
+
+else:
+   print(f"{num} is not a prime number")
+
+
+# एक पायथन फ़ंक्शन लिखें जो किसी दिए गए नंबर के कारकों को प्रिंट करता है
+def print_factors(x):
+   print(f"The factors of {x} are:")
+   for i in range(1, x + 1):
+       if x % i == 0:
+           print(i)
+
+# किसी संख्या का भाज्य ज्ञात करने के लिए प्रोग्राम लिखिए
+num = 13
+factorial = 1
+
+if num < 0:
+   print("No factorials for negative numbers!")
+
+elif num == 0:
+   print("The factorial of 0 is 1")
+
+else:
+   for i in range(1,num + 1):
+       factorial = factorial*i
+   print(f"The factorial of {num} is {factorial}")
+
+
+# कोई संख्या ऋणात्मक, सकारात्मक या शून्य है या नहीं, यह प्रिंट करने के लिए एक पायथन फ़ंक्शन लिखें
+def check_pnz(num):
+    if num > 0:
+       print("Positive number")
+
+    elif num == 0:
+       print("Zero")
+
+    else:
+       print("Negative number")
+
+
+# किसी दी गई संख्या की गुणन तालिका को प्रिंट करने के लिए एक प्रोग्राम लिखें
+
+num = 9
+for i in range(1, 11):
+   print(f"{num} x {i} = {num*i}")
+
+
+# दिए गए शब्दों की संख्या के लिए 2 की घात प्रिंट करने के लिए एक पायथन फ़ंक्शन लिखें
+def two_power(terms):
+    result = list(map(lambda x: 2 ** x, range(terms)))
+
+    print(f"The total terms are: {terms}")
+    for i in range(terms):
+       print(f"2^{i} = {result[i]}")
+
+
+# दी गई संख्या से विभाजित होने वाली सूची में संख्याओं को फ़िल्टर करने के लिए एक प्रोग्राम लिखें
+my_list = [11, 45, 74, 89, 132, 239, 721, 21]
+
+num = 3
+result = list(filter(lambda x: (x % num == 0), my_list))
+
+print(f"Numbers divisible by {num} are {result}")
+
+
+# एक पायथन फ़ंक्शन लिखें जो n प्राकृतिक संख्याओं का योग लौटाता है
+def sum_natural(num):
+    if num < 0:
+       print("Please enter a positive number!")
+    else:
+       sum = 0
+       while(num > 0):
+           sum += num
+           num -= 1
+       return num
+
+# किसी सूची में पहले और अंतिम तत्वों की अदला-बदली करने के लिए एक प्रोग्राम लिखिए
+my_list = [1, 2, 3, 4, 5, 6]
+my_list[0], my_list[-1] = my_list[-1], my_list[0]
+
+
+# एक वृत्त का क्षेत्रफल ज्ञात करने के लिए एक पायथन फ़ंक्शन लिखें, जिसकी त्रिज्या दी गई है
+def findArea(r): 
+    PI = 3.142
+    return PI * (r*r)
+
+
+# पहले n प्राकृत संख्याओं के वर्गों के योग को प्रिंट करने के लिए एक प्रोग्राम लिखिए
+n = 21
+sum_n = 0
+for i in range(1, n+1):
+    sum_n += i**2
+print(sum_n)
+
+
+# सूची की लंबाई को प्रिंट करने के लिए एक प्रोग्राम लिखें
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+print(len(my_list))
+
+
+# किसी दिए गए टपल की लंबाई को प्रिंट करने के लिए एक पायथन फंक्शन लिखें
+my_tuple = (1, 2, 3, 4, 5, 6, 7, 8)
+
+print(len(my_tuple))
+
+
+# किसी दी गई सूची के तत्वों को एक पंक्ति में एक तत्व को प्रिंट करने के लिए एक पायथन फ़ंक्शन लिखें
+def custom_print(l):
+    for _ in l:
+        print(_)
+
+
+# एक सूची से सभी विषम संख्याओं को हटाने और शेष सूची को वापस करने के लिए एक पायथन फ़ंक्शन लिखें
+
+def remove_odd(my_list):
+    result = list(filter(lambda x: (x % 2 == 0), my_list))
+    return result
+
+
+# एक सूची से सभी सम संख्याओं को हटाने और शेष सूची को वापस करने के लिए एक पायथन फ़ंक्शन लिखें
+
+def remove_even(my_list):
+    result = list(filter(lambda x: (x % 2 != 0), my_list))
+    return result
+
+
+# एक ऐसा फ़ंक्शन लिखें जो दो सूचियों को इनपुट के रूप में लेता है और संबंधित तत्वों की एक ज़िपित सूची देता है
+
+def zip_list(list1, list2):
+    return list(zip(list1, list2))
+
+
+# किसी दी गई फ़ाइल की सामग्री को प्रिंट करने के लिए एक प्रोग्राम लिखें
+file_name = 'temp.txt'
+with open(file_name, 'r') as f:
+    print(f.read())
+
+
+# एक ऐसा फंक्शन लिखिए जो दो इनपुट नंबरों का LCM देता है
+def lcm(a, b):
+    if a>b:
+        min_ = a
+    else:
+        min_ = b
+    while True:
+        if min_%a==0 and min_%b==0:
+            break
+        min_+=1
+    return min_
+
+
+# सूची में अद्वितीय तत्वों को प्रिंट करने के लिए एक प्रोग्राम लिखें
+my_list = [1, 2, 4, 5, 2, 3, 1, 5, 4, 7, 8, 2, 4, 5, 2, 7, 3]
+
+print(set(my_list))
+
+
+# एक फ़ंक्शन लिखें जो किसी दी गई संख्या के अंकों का योग लौटाता है
+def digisum(num):
+    sum_=0
+    while num > 0:
+        dig = num % 10
+        sum_+=dig
+        num//=10
+    return sum_
+
+
+# कोई संख्या पैलिंड्रोम है या नहीं, यह जांचने और प्रिंट करने के लिए एक प्रोग्राम लिखें
+
+num = 12321
+temp = num
+rev = 0
+while num > 0:
+    dig = num % 10
+    rev = rev*10 + dig
+    num//=10
+if temp==rev :
+    print("The number is a palindrome!")
+else:
+    print("The number isn't a palindrome!")
+
+
+# एक फ़ंक्शन लिखें जो किसी दिए गए मान को n बार प्रिंट करता है
+def print_n(val, n):
+    for _ in range(n):
+        print(val)
+
+
+# वर्ग का क्षेत्रफल ज्ञात करने के लिए एक फंक्शन लिखिए
+def square_area(a):
+    return a*a
+
+
+# वर्ग का परिमाप ज्ञात करने के लिए एक फलन लिखिए
+def square_perimeter(a):
+    return 4*a
+
+# आयत का क्षेत्रफल ज्ञात करने के लिए एक फंक्शन लिखिए
+def rectangle_area(l, b):
+    return l*b
+
+# एक आयत का पर्मिटर ज्ञात करने के लिए एक फंक्शन लिखिए
+def rectangle_perimeter(l, b):
+    return 2*(l+b)
+
+# एक वृत्त का क्षेत्रफल ज्ञात करने के लिए एक पायथन फ़ंक्शन लिखें, जिसकी त्रिज्या दी गई है
+def findArea(r): 
+    PI = 3.142
+    return PI * (r*r)
+
+# बिजली बिल की गणना करने और वापस करने के लिए एक फंक्शन लिखें। उपयोग की गई इकाइयाँ दी गई हैं। कीमत प्रति यूनिट तय है और 750 यूनिट के बाद बढ़ जाती है।
+
+def calc_elect_bill(units):
+    if units > 0:
+        if units <= 750:
+            return 5*units
+        else:
+            return 5*(750) + 7*(units-750)
+
+    else:
+        return -1
+
+
+# संख्या दिए जाने पर, सप्ताह का दिन वापस करने के लिए एक फ़ंक्शन लिखें
+def give_day(n):
+    day_dict = {1: 'Sunday', 2: 'Monday', 3: 'Tuesday', 4: 'Wednesday', 5: 'Thursday', 6: 'Friday', 7: 'Saturday'}
+    return day_dict[n]
+
+
+# एक सिलेंडर के आयतन की गणना और प्रिंट करने के लिए एक प्रोग्राम लिखें
+r = 3
+h = 5
+pi = 3.14
+volume = pi*(r**2)*h
+print(volume)
+
+
+# इनपुट संख्याओं के औसत की गणना करने और वापस करने के लिए एक फ़ंक्शन लिखें
+
+def calc_avg(*args):
+    if len(args) > 0:
+        return sum(args)/len(args)
+    return None
+
+
+# p, r, t दिया हुआ, चक्रवृद्धि ब्याज की गणना करने के लिए एक फ़ंक्शन लिखें
+def comp_int(p, r, t):
+    amount = p * (1 + (r/100))**t
+    interest = amount - p
+    return interest
+
+
+# साधारण ब्याज की गणना के लिए एक फलन लिखिए, दिया हुआ p, r, t
+def simp_int(p, r, t):
+    interest = (p*r*t)/100
+    return interest
+
+
+# दिए गए स्ट्रिंग को प्रिंट करने के लिए एक प्रोग्राम लिखें, जिसमें सभी स्वरों को '_' से बदल दिया जाए
+
+st = "Where is this going? Could you please help me understand!"
+vowels = "AEIOUaeiou"
+
+for v in vowels:
+    st = st.replace(v, '_')
+
+print(st)
+
+
+# कोई संख्या पूर्ण है या नहीं, यह जाँचने के लिए एक फलन लिखिए
+def is_perfect(n):
+    sum_ = 0
+    for i in range(1, n//2 + 1):
+        if n%i == 0:
+            sum_+=i
+    if sum_ == n:
+        return True
+    return False
+
+# एक ऐसा फ़ंक्शन लिखें जो इनपुट सूची से सकारात्मक और नकारात्मक संख्याओं की अलग-अलग सूचियां देता है
+def seperate_pn(l):
+    pos_list = []
+    neg_list = []
+    for _ in l:
+        if _<0:
+            neg_list.append(_)
+        else:
+            pos_list.append(_)
+    return pos_list, neg_list
+
+
+# एक त्रिभुज का क्षेत्रफल ज्ञात करने और प्रिंट करने के लिए एक प्रोग्राम लिखिए, जिसकी ऊँचाई और चौड़ाई दी गई हो।
+
+h = 12
+w = 11
+area = 0.5*h*w
+print(area)
+
+
+# दिए गए u, v और t त्वरण को खोजने के लिए एक फ़ंक्शन लिखें
+
+def acc(u, v, t):
+    return (v-u)/t
+
+# दो संख्याओं को गुणा करने के लिए लैम्ब्डा फ़ंक्शन लिखें
+
+multiply = lambda a, b: a*b
+
+# दो संख्याओं को जोड़ने के लिए लैम्ब्डा फंक्शन लिखें
+add = lambda a, b: a+b
+
+# एक लैम्ब्डा फ़ंक्शन लिखें जो सही देता है यदि इनपुट संख्या अन्यथा गलत है
+
+even = lambda a: True if a%2 == 0 else False
+
+# एक लैम्ब्डा फ़ंक्शन लिखें, चरित्र ग्रोम को इसका एसीआई मान देने के लिए
+
+ascii = lambda a: chr(a)
+
+# एक लैम्ब्डा फ़ंक्शन लिखें जो किसी संख्या में अंकों की संख्या देता है
+
+dig_cnt = lambda a: len(str(a))
+
+# यह जाँचने के लिए एक प्रोग्राम लिखें कि त्रिभुज मान्य है या नहीं, यह तीनों कोण दिए गए हैं
+
+def is_valid_triangle_angle(a, b c):
+    if a+b+c == 180:
+        return True
+    return False
+
+# यह जांचने के लिए एक प्रोग्राम लिखें कि त्रिभुज मान्य है या नहीं, यह देखते हुए कि यह तीनों भुजाओं की लंबाई है
+
+def is_valid_triangle_length(a, b c):
+    if a>0 and b>0 and c>0:
+        if a+b > c and a+c > b and b+c > a:
+            return True
+    return False
+
+# एक लैम्ब्डा फ़ंक्शन लिखें जो एक बयान में शब्द संख्या देता है।
+
+count_word = lambda s: len(s.split(' '))
+
+
+# किसी संख्या के अंकों को उल्टे क्रम में निकालने और प्रिंट करने के लिए एक प्रोग्राम लिखें। संख्या उपयोगकर्ता से इनपुट है।
+
+num = int(input("Enter a number with multiple digit: "))
+n=0
+while num>0:
+    a = num%10
+    num = num - a
+    num = num/10
+    print(int(a),end="")
+    n = n + 1
+
+# एक फ़ंक्शन लिखें जो height (m) और weight (kg) लेता है, BMI की गणना करता है और टिप्पणियों को प्रिंट करता है
+
+def bmi(height: "Meters", weight: "Kgs"):
+    bmi = weight/(height**2) 
+    print("Your BMI is: {0} and you are ".format(bmi), end='')
+    if ( bmi < 16):
+       print("severely underweight.")
+    elif ( bmi >= 16 and bmi < 18.5):
+       print("underweight.")
+    elif ( bmi >= 18.5 and bmi < 25):
+       print("healthy.")
+    elif ( bmi >= 25 and bmi < 30):
+       print("overweight.")
+    elif ( bmi >=30):
+       print("severely overweight.") 
+
+# एक प्रोग्राम लिखें जो सभी वर्णों को एक स्ट्रिंग में प्रिंट करता है और अन्य सभी वर्णों को छोड़ देता है
+
+string = "$john.snow#@Got.bad_ending/com"
+for ch in string:
+    if (ch>='A' and ch<='Z') or (ch>='a' and ch<='z'):
+        print(ch, end='')
+    else:
+        pass
+
+# एक ऐसा फंक्शन लिखिए जो टॉवर ऑफ हनोई प्रॉब्लम में डिस्क की संख्या लेता है और आवश्यक कदमों की न्यूनतम संख्या लौटाता है
+
+def hanoi(x):
+    if x == 1:
+        return 1
+    else:
+        return 2*hanoi(x-1) + 1
+
+# सेंटीमीटर को इंच में बदलने के लिए लैम्ब्डा फ़ंक्शन लिखें
+
+cm_to_inch = lambda x: x/2.54
+
+# दो सूचियों के मिलन को खोजने के लिए लैम्ब्डा फ़ंक्शन लिखें
+
+union = lambda a, b: list(set(a)|set(b))
+
+# दो सूचियों के प्रतिच्छेदन को खोजने के लिए लैम्ब्डा फ़ंक्शन लिखें
+
+intersection = lambda a, b: list(set(a)&set(b))
+
+# एक प्रोग्राम लिखें जो दो संख्याओं के वर्ग को जोड़ता है और इसे प्रिंट करता है
+
+a = 32
+b = 21
+
+result = a**2 + b**2
+print(result)
+
+# इनपुट स्ट्रिंग्स को सम्‍मिलित करने के लिए एक पायथन फ़ंक्शन लिखें और सेपरेटर के लिए एक विकल्प भी है
+def con_str(*args, sep = ' '):
+  return sep.join(args)
+
+# एक श्रेणी में सभी सम संख्याओं को प्रिंट करने के लिए एक प्रोग्राम लिखें
+
+r1, r2 = 1, 28
+
+for _ in range(r1, r2+1):
+  if _%2 == 0:
+    print(_)
+
+# डिक्शनरी आइटम को सॉर्ट करने के लिए एक पायथन प्रोग्राम लिखें
+dict1 = {'car': [7, 6, 3],  
+             'bike': [2, 10, 3],  
+             'truck': [19, 4]}
+
+print(f"The original dictionary is : {str(dict1)}") 
+
+res = dict() 
+for key in sorted(dict1): 
+    res[key] = sorted(dict1[key])
+
+print(f"The sorted dictionary : {str(res)}")
+
+# दिनांक और समय प्रदर्शित करने के लिए एक प्रोग्राम लिखें
+import datetime
+now = datetime.datetime.now()
+time= now.strftime("%Y-%m-%d %H:%M:%S")
+print(f"Current date and time : {time}")
+
+# निरपेक्ष मूल्य वापस करने के लिए एक प्रोग्राम लिखें
+num = -10
+print(f'Absolute of {num} is {abs(num)}')
+
+# सूची की लंबाई जांचने के लिए एक पायथन प्रोग्राम लिखें
+sample_list = ['a','b','c']
+print(f'length of sample_list is {len(sample_list)}')
+
+# दो तिथियों के बीच दिनों की संख्या की गणना करने के लिए एक पायथन प्रोग्राम लिखें।
+from datetime import date
+f_date = date(2019, 4, 15) # YYYY/MM/DD
+l_date = date(2020, 4, 15) # YYYY/MM/DD
+delta = l_date - f_date
+print(f'No of days between {f_date} and {l_date} is:{delta.days}')
+
+# Python ऑब्जेक्ट को JSON स्ट्रिंग्स में बदलने के लिए Python प्रोग्राम लिखें।
+import json
+python_dict =  {"name": "David", "age": 6, "class":"I"}
+json_dict = json.dumps(python_dict, sort_keys=True, indent=4)
+print(f"json dict : {json_dict}")
+
+# सूची से सबसे बड़ी संख्या प्राप्त करने के लिए एक पायथन प्रोग्राम लिखें
+def max_num_in_list(list):
+    max = list[0]
+    for a in list:
+        max = a if a > max else max
+    return max
+print(f'max_num_in_list [1, 10, -8, 0], Ans:{max_num_in_list([1, 10, -8, 0])}')
+
+# सूची से डुप्लीकेट हटाने के लिए एक पायथन प्रोग्राम लिखें
+a = [10,20,30,20,10,50,60,40,80,50,40]
+
+dup_items = set()
+uniq_items = []
+for x in a:
+    if x not in dup_items:
+        uniq_items.append(x)
+        dup_items.add(x)
+
+print(f'dup_items:{dup_items}')
+
+# उथली सूची को समतल करने के लिए एक पायथन प्रोग्राम लिखें
+import itertools
+original_list = [[2,4,3],[1,5,6], [9], [7,9,0], [1,2,3,4]]
+new_merged_list = list(itertools.chain(*original_list))
+print(f'merged list/flatten:{new_merged_list}')
+
+# एकाधिक सूची बनाने के लिए एक पायथन प्रोग्राम लिखें
+
+obj = {}
+for i in range(1, 11):
+    obj[str(i)] = []
+print(f'create multiple list:{obj}')
+
+# दो शब्दकोशों को मर्ज करने के लिए एक पायथन प्रोग्राम लिखें
+
+d1 = {'a': 100, 'b': 200}
+d2 = {'x': 300, 'y': 200}
+d = d1.copy()
+d.update(d2)
+print(f'merge two dictionaries:{d}')
+
+# एक शब्दकोश में सभी वस्तुओं को जोड़ने के लिए एक पायथन प्रोग्राम लिखें
+
+my_dict = {'data1':100,'data2':-54,'data3':247}
+print(f'Sum all the items in a dictionary:{sum(my_dict.values())}')
+
+# एक शब्दकोश में अधिकतम और न्यूनतम मान प्राप्त करने के लिए एक पायथन प्रोग्राम लिखें
+
+my_dict = {'x':500, 'y':5874, 'z': 560}
+
+key_max = max(my_dict.keys(), key=(lambda k: my_dict[k]))
+key_min = min(my_dict.keys(), key=(lambda k: my_dict[k]))
+
+print('Maximum Value in a dictionary: ',my_dict[key_max])
+print('Minimum Value in a dictionary: ',my_dict[key_min])
+
+# एक शर्त के लिए कुछ नहीं करने के लिए एक पायथन प्रोग्राम लिखें
+
+if 1 + 1 == 2:
+    pass # Nothing
+
+# enumerate पद्धति का उपयोग करने के लिए एक पायथन प्रोग्राम लिखें
+
+for count, value in enumerate(obj):
+    print(count, value)
+
+# अनुपलब्ध शब्दकोश कुंजी के लिए सेटडेफॉल्ट का उपयोग करने के लिए एक पायथन प्रोग्राम लिखें
+a_dict = {'a':1}
+a_dict.setdefault('b',2)
+print(f'After appending with new value:{a_dict}')
+
+# नक्शों का उपयोग करने के लिए एक पायथन प्रोग्राम लिखें
+
+def square(number):
+    return number ** 2
+
+numbers = [1, 2, 3, 4, 5]
+
+squared = map(square, numbers)
+
+print(f'mapped numbers:{list(squared)}')
+
+# मॉड्यूलो ऑपरेटर का उपयोग करने के लिए एक पायथन प्रोग्राम लिखें
+
+print(f'modulo 15 % 4: Sol->{15 % 4}')
+
+# संलग्न और वैश्विक दायरे की व्याख्या करने के लिए एक पायथन प्रोग्राम लिखें
+
+x = 'global'
+
+def f():
+    x = 'enclosing'
+    def g():
+        print(x)
+    g()
+    return x
+obj1 = f()
+print('explain global scope:',obj1)
+
+# स्थानीय और वैश्विक दायरे का विस्तार करने के लिए एक पायथन प्रोग्राम लिखें
+
+def f1():
+    x = 'enclosing'
+    def g():
+        x = 'local'
+        return x
+    x=g()
+    return x
+obj2 = f1()
+print('explain local scope:',obj2)
+
+# मैचिंग के लिए रेगुलर एक्सप्रेशन का उपयोग करने के लिए एक पायथन प्रोग्राम लिखें
+import re
+print('Find the characters in the given string:',re.findall(r'[a-z]+', '123FOO456', flags=re.IGNORECASE))
+
+# मैचिंग के लिए रेगुलर एक्सप्रेशन का उपयोग करने के लिए एक पायथन प्रोग्राम लिखें
+s = 'foo123bar'
+m = re.findall('123', s)
+print('find the number position:',m)
+
+# लोअर स्ट्रिंग को अपरकेस में बदलने के लिए एक पायथन प्रोग्राम लिखें
+a = 'string'
+print(f'convert lowercase to uppercase:{a.upper()}')
+
+# अपरकेस स्ट्रिंग को लोअर में बदलने के लिए एक पायथन प्रोग्राम लिखें
+a = 'STRING'
+print(f'convert lowercase to uppercase:{a.lower()}')
+
+# स्क्वायर रूट खोजने के लिए एक पायथन प्रोग्राम लिखें
+num = 8 
+
+num_sqrt = num ** 0.5
+print('The square root of %0.3f is %0.3f'%(num ,num_sqrt))
+
+# किलोमीटर को मील में बदलने के लिए एक पायथन प्रोग्राम लिखें
+kilometers = 10.0
+
+conv_fac = 0.621371
+
+miles = kilometers * conv_fac
+print('%0.2f kilometers is equal to %0.2f miles' %(kilometers,miles))
+
+# सेल्सियस को फ़ारेनहाइट में बदलने के लिए एक पायथन प्रोग्राम लिखें
+celsius = 37.5
+fahrenheit = (celsius * 1.8) + 32
+print('%0.1f degree Celsius is equal to %0.1f degree Fahrenheit' %(celsius,fahrenheit))
+
+# एक संख्या सकारात्मक, नकारात्मक या 0 है या नहीं, यह जांचने के लिए एक पायथन प्रोग्राम लिखें
+num = 10
+if num > 0:
+   print("Positive number")
+elif num == 0:
+   print("Zero")
+else:
+   print("Negative number")
+
+# पायथन प्रोग्राम यह जांचने के लिए कि कोई संख्या विषम या सम है या नहीं
+num = 100
+if (num % 2) == 0:
+   print("{0} is Even".format(num))
+else:
+   print("{0} is Odd".format(num))
+
+# गुणन तालिका प्रदर्शित करने के लिए पायथन प्रोग्राम
+num = 12
+for i in range(1, 11):
+   print(num, 'x', i, '=', num*i)
+
+# पासा पलटने के लिए एक प्रोग्राम लिखें
+import random
+min = 1
+max = 6
+
+print("Rolling the dices...and the values are",random.randint(min, max))
+print("Rolling the dices...and the values are",random.randint(min, max))
+
+# औसत की गणना करने के लिए एक पायथन प्रोग्राम लिखें
+list1 = [1,3,4,5]
+average = (sum(list1)) / len(list1)
+print(f"the average score is:  {average} ")
+
+# रिवर्स लिस्ट प्रिंट करने के लिए एक पायथन प्रोग्राम लिखें
+print(f'reverese the given list elements:{list1[::-1]}')
+
+# थ्रेड बनाने के लिए एक पायथन प्रोग्राम लिखें
+import threading
+from threading import Thread
+import time
+
+def print_time( threadName, delay):
+    count = 0
+    while count < 5:
+        time.sleep(delay)
+        count += 1
+        print("%s: %s" % ( threadName, time.ctime(time.time()) ))
+
+
+# 1000 से कम संख्या की जाँच करने के लिए एक पायथन प्रोग्राम लिखें
+def near_thousand(n):
+      return ((abs(1000 - n) <= 100) or (abs(2000 - n) <= 100))
+print('near to 1000',near_thousand(1000))
+print('near to 1300',near_thousand(1300))
+
+# तत्वों की सूची के लिए निचले मामले को ऊपरी में बदलने के लिए एक पायथन प्रोग्राम लिखें
+
+x = ['ab', 'cd']
+for i in x:
+    print(i.upper())
+
+# संख्या पूरी तरह से विभाजित होने पर तोड़ने के लिए एक पायथन प्रोग्राम लिखें
+i = 1
+while True:
+    if i%3 == 0:
+        break
+    print(i)
+ 
+    i+= 1
+
+# दी गई सूची में नाम मौजूद होने की जांच करने के लिए एक पायथन प्रोग्राम लिखें
+names1 = ['Amir', 'Bala', 'Chales']
+for n in names1:
+    name = n.lower()
+    if 'amir' == name:
+        print('Yes name exists:',name)
+    else:
+        print('No')
+
+# मैट्रिक्स को आउटपुट के रूप में प्रिंट करने के लिए एक पायथन प्रोग्राम लिखें
+matrix = [[1, 2, 3, 4],
+       [4, 5, 6, 7],
+       [8, 9, 10, 11],
+       [12, 13, 14, 15]]
+ 
+for i in range(0, 4):
+    print(matrix[i][1], end = " ")
+
+# लगने वाले समय की गणना करने के लिए एक पायथन प्रोग्राम लिखें
+
+from time import localtime
+
+activities = {8: 'Sleeping',
+              9: 'Commuting',
+              17: 'Working',
+              18: 'Commuting',
+              20: 'Eating',
+              22: 'Resting' }
+
+time_now = localtime()
+hour = time_now.tm_hour
+
+for activity_time in sorted(activities.keys()):
+    if hour < activity_time:
+        print (activities[activity_time])
+        break
+else:
+    print ('Unknown, AFK or sleeping!')
+
+
+# पाठ फ़ाइल में कुंजी खोजने के लिए एक पायथन प्रोग्राम लिखें
+fname = 'sample.txt'
+l='keyword' # Enter letter to be searched
+k = 0
+ 
+with open(fname, 'r') as f:
+    for line in f:
+        words = line.split()
+        for i in words:
+            if(i==l):
+                k=k+1
+print("Occurrences of the letter:",k)
+
+# सूची की समझ की व्याख्या करने और वैकल्पिक मूल्यों को प्रिंट करने के लिए एक पायथन प्रोग्राम लिखें
+t = (1, 2, 4, 3, 8, 9)
+print([t[i] for i in range(0, len(t), 2)])
+
+# टुपल वैल्यू को सॉर्ट करने के लिए एक पायथन प्रोग्राम लिखें
+a=(2,3,1,5)
+tuple_sorted = sorted(a)
+print(tuple(tuple_sorted))
+
+# एकाधिक दो सूची मानों के लिए एक पायथन प्रोग्राम लिखें
+l1=[1,2,3]
+l2=[4,5,6]
+print('multiply two list values:',[x*y for x in l1 for y in l2])
+
+# किसी दी गई सूची 'एल' से केवल ऋणात्मक पूर्णांकों को चुनने के लिए सूची समझ लिखें।
+l1=[1,2,3,-4,-8]
+
+print('negative integers:', [x for x in l1 if x<0])
+
+# सभी सूची तत्वों को अपरकेस में बदलने के लिए एक पायथन प्रोग्राम लिखें
+s=["pune", "mumbai", "delhi"]
+print([(w.upper(), len(w)) for w in s])
+
+# अजगर ज़िप विधि को समझाने के लिए एक अजगर कार्यक्रम लिखें
+l1=[2,4,6]
+l2=[-2,-4,-6]
+for i in zip(l1, l2):
+	print(i)
+
+# अजगर ज़िप विधि का उपयोग करके दो सूची जोड़ने के लिए एक अजगर कार्यक्रम लिखें
+
+l1=[10, 20, 30]
+l2=[-10, -20, -30]
+l3=[x+y for x, y in zip(l1, l2)]
+print('added two list:',l3)
+
+# संख्या और उसके घन के लिए एक सूची समझ लिखें
+l=[1, 2, 3, 4, 5, 6, 7, 8, 9]
+print([x**3 for x in l])
+
+# पंक्तियों को कॉलम और वीवी में प्रिंट करने के लिए एक सूची समझ लिखें
+
+l=[[1 ,2, 3], [4, 5, 6], [7, 8, 9]]
+print([[row[i] for row in l] for i in range(3)])
+
+# कॉलम में पंक्तियों को प्रिंट करने के लिए एक सूची समझ लिखें और इसके विपरीत
+
+def unpack(a,b,c,d):
+    print(a+d)
+x = [1,2,3,4]
+unpack(*x)
+
+# पायथन लैम्ब्डा फ़ंक्शन का उपयोग करने के लिए एक पायथन प्रोग्राम लिखें
+lamb = lambda x: x ** 3
+print(lamb(5))
+
+# एक स्ट्रिंग n बार गुणा करने के लिए एक पायथन प्रोग्राम लिखें
+a = 'python'
+print(a*5)
+
+# दो संख्याओं की जाँच करने के लिए एक अजगर लिखें जो इससे अधिक या बराबर या उससे कम हैं
+def maximum(x, y):
+    if x > y:
+        return x
+    elif x == y:
+        return 'The numbers are equal'
+    else:
+        return y
+ 
+print(maximum(2, 3))
+
+# ज़िप करने के लिए एक अजगर लिखें और मूल रूप में शब्दकोश तत्वों के रूप में प्रिंट करें
+
+a={"a":1,"b":2,"c":3}
+b=dict(zip(a.values(),a.keys()))
+print(b)
+
+
+# शब्दकोश तत्व को हटाने के लिए एक पायथन प्रोग्राम लिखें
+a={1:5,2:3,3:4}
+a.pop(3)
+print(a)
+
+# दो डिक्शनरी बराबर हैं या नहीं, यह जांचने के लिए एक पायथन प्रोग्राम लिखें
+d1 = {"john":40, "peter":45}
+d2 = {"john":466, "peter":45}
+d1 == d2
+
+# सूची के रूप में केवल शब्दकोश कुंजी मुद्रित करने के लिए एक पायथन प्रोग्राम लिखें
+
+d = {"john":40, "peter":45}
+print(list(d.keys()))
+
+# दो सूचियाँ समान हैं या नहीं, यह जाँचने के लिए एक पायथन प्रोग्राम लिखें
+
+a=[1, 4, 3, 5, 2]
+b=[3, 1, 5, 2, 4]
+print(a==b)
+
+# अद्वितीय तत्वों के सेट का योग करने के लिए एक पायथन प्रोग्राम लिखें
+
+a={5,6,7}
+print(sum(a,5))
+
+# ट्राई कैच कोड को लागू करने के लिए एक पायथन प्रोग्राम लिखें
+
+try:
+    s={5,6}
+    s*3
+except Exception as e:
+    print(e)
+
+
+# अद्वितीय तत्वों की लंबाई गिनने के लिए एक पायथन प्रोग्राम लिखें
+
+nums = set([1,1,2,3,3,3,4,4])
+print(len(nums))
+
+# अजगर में विभाजित करने के लिए एक अजगर कार्यक्रम लिखें
+
+print('abcdefcdghcd'.split('cd', 2))
+
+# स्ट्रिंग में शीर्षक जोड़ने के लिए एक पायथन प्रोग्राम लिखें
+print('ab cd-ef'.title())
+
+# स्ट्रिंग की समान लंबाई को प्रिंट करने के लिए एक पायथन प्रोग्राम लिखें
+print('ab'.zfill(5))
+
+# स्ट्रिंग प्रतिस्थापन का उपयोग करने के लिए एक पायथन प्रोग्राम लिखें
+print('abcdef12'.replace('cd', '12'))
+
+# स्ट्रिंग istitle की जांच के लिए एक पायथन प्रोग्राम लिखें
+str1 = 'Hello!2@#World'
+if str1.istitle():
+    print('Yes string is title')
+
+# स्ट्रिंग पर lstrip करने के लिए एक अजगर प्रोग्राम लिखें
+
+print('xyyzxxyxyy'.lstrip('xyy'))
+
+# पहचानकर्ता/कीवर्ड की जांच के लिए एक पायथन प्रोग्राम लिखें
+print('for'.isidentifier())
+
+# जांचने के लिए एक पायथन प्रोग्राम लिखें एक संख्या/int है
+print('11'.isnumeric())
+
+# जांचने के लिए एक पायथन प्रोग्राम लिखें कि एक चर प्रिंट करने योग्य है
+print('1@ a'.isprintable())
+
+# यह जांचने के लिए एक पायथन प्रोग्राम लिखें कि इसमें कोई स्थान है या नहीं
+print(''''''.isspace())
+
+# जांचने के लिए एक पायथन प्रोग्राम लिखें एक शीर्षक है
+print('HelloWorld'.istitle())
+
+# जांचने के लिए एक पायथन प्रोग्राम लिखें कि सभी अंक/इंट हैं
+print('ab,12'.isalnum())
+
+# जांचने के लिए एक पायथन प्रोग्राम लिखें कि सभी अल्फ़ान्यूमेरिक हैं
+print('ab'.isalpha())
+
+# यह जांचने के लिए एक पायथन प्रोग्राम लिखें कि सभी अंक हैं
+print('0xa'.isdigit())
+
+# एफ स्ट्रिंग का उपयोग करने के लिए एक पायथन प्रोग्राम लिखें
+var1 = 'python language'
+print(f'f-string is an good feature in {var1}')
+
+# एक शब्दकोश को पुनरावृति करने और जोड़ने के लिए एक अजगर कार्यक्रम लिखें
+
+D=dict(p='san', q='foundry')
+print('{p}{q}'.format(**D))
+
+# रिक्त स्थान को 1 में बदलने के लिए एक पायथन प्रोग्राम लिखें
+a='1 0 0 1'
+print(a.replace(' ', '1'))
+
+# जनरेटर को समझाने के लिए एक पायथन प्रोग्राम लिखें
+def f11(x):
+    yield x+1
+g=f11(8)
+print(next(g))
+
+# रिक्त स्थान को 1 में बदलने के लिए एक पायथन प्रोग्राम लिखें
+def f12(x):
+    yield x+1
+    print("test")
+    yield x+2
+g=f12(9)
+print(next(g))
+
+# वर्तमान कार्यशील निर्देशिका को प्रिंट करने के लिए एक पायथन प्रोग्राम लिखें
+import os
+print(os.getcwd())
+
+# एक स्ट्रिंग के एएससीआई मान को प्रिंट करने के लिए एक पायथन प्रोग्राम लिखें
+print([ord(ch) for ch in 'abc'])
+
+# सूची में विस्तार/सूची में संलग्न करने के लिए एक पायथन प्रोग्राम लिखें
+a=[13,56,17]
+a.append([87])
+a.extend([45,67])
+print(a)
+
+# रिक्त स्थान को 1 में बदलने के लिए एक पायथन प्रोग्राम लिखें
+my_string = 'balaji'
+k = [print(i) for i in my_string if i not in "aeiou"]
+print('Not a vowel',k)
+
+# संख्या की एक श्रेणी जोड़ने और वर्ग करने के लिए एक पायथन प्रोग्राम लिखें
+x = [i**+1 for i in range(3)]; print(x)
+
+# सूची व्यापक के साथ दो सूची को गुणा करने के लिए एक पायथन प्रोग्राम लिखें
+l1=[1,2,3]
+l2=[4,5,6]
+print([x*y for x in l1 for y in l2])
+
+# किसी दी गई सूची में केवल अंक या केवल apha charac को प्रिंट करने के लिए एक पायथन प्रोग्राम लिखें
+l=["good", "oh!", "excellent!", "#450"]
+print([n for n in l if n.isalpha() or n.isdigit()])
+
+# आज की तारीख को प्रिंट करने के लिए एक पायथन प्रोग्राम लिखें
+tday=datetime.date.today()
+print(tday)
+
+# टुपल अपरिवर्तनीय हैं यह जांचने के लिए एक पायथन प्रोग्राम लिखें
+a=(1,2,3)
+try:
+    a = a+1
+except Exception as e:
+    print(e)
+
+# व्यापक सूची का उपयोग करके भाज्य योग की गणना करने के लिए एक पायथन प्रोग्राम लिखें
+import functools 
+n =5
+print(functools.reduce(lambda x, y: x * y, range(1, n+1)))
+
+# प्रत्येक वर्ण के लेन को प्रिंट करने के लिए एक पायथन प्रोग्राम लिखें
+words = ['cat', 'window', 'defenestrate']
+for w in words:
+    print(w, len(w))
+    
+# लैम्ब्डा फ़ंक्शन का उपयोग करके विधि के प्रत्येक कॉल पर वृद्धि करने के लिए एक पायथन प्रोग्राम लिखें
+def make_incrementor(n):
+    return lambda x: x + n
+f = make_incrementor(42)
+f(0)
+print(f(1))
+
+# सूची व्यापक का उपयोग करके सॉर्ट करने के लिए एक पायथन प्रोग्राम लिखें
+pairs = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]
+pairs.sort(key=lambda pair: pair[1])
+print(pairs)
+
+# सरणी/सूची के पहले तत्व को डेल करने के लिए एक पायथन प्रोग्राम लिखें
+a = [-1, 1, 66.25, 333, 333, 1234.5]
+del a[0]
+print(a)
+
+# किसी दिए गए शब्द के पहले अक्षर को बदलने के लिए एक पायथन प्रोग्राम लिखें
+word = "goal"
+word = "f" + word[1:]
+print(word)
+
+# दिए गए वाक्यांश में एक स्ट्रिंग खोजने के लिए एक पायथन प्रोग्राम लिखें
+phrase = "the surprise is in here somewhere"
+print(phrase.find("surprise"))
+
+# एफ-स्ट्रिंग के उपयोग की व्याख्या करने के लिए एक पायथन प्रोग्राम लिखें
+n = 3
+m = 4
+print(f"{n} times {m} is {n*m}")
+
+
+# तीन संख्याओं को गुणा करने के लिए एक पायथन प्रोग्राम लिखें
+num1 = 1.5
+num2 = 6.3
+num3 = -2.3
+product = num1 * num2 * num3
+print(f'Product: {product}')
+
+
+# एक पायथन फ़ंक्शन लिखें जो दो नंबर दिए जाने पर, पहली संख्या को दूसरी संख्या से विभाजित करेगा और भागफल और शेषफल लौटाएगा
+def divide_first_number_by_second(num1, num2):
+    return (num1 // num2), (num1 % num2)
+
+
+# दी गई सूची में सबसे बड़ी और सबसे छोटी संख्या वापस करने के लिए एक पायथन फ़ंक्शन लिखें और सूची खाली होने पर कुछ नहीं लौटाएं
+def largest_and_smallest(list_of_nums):
+    if list_of_nums:
+        return max(list_of_nums), min(list_of_nums)
+    else:
+        return
+
+
+# nth फ़ाइबोनैचि संख्या को प्रिंट करने के लिए एक पुनरावर्ती पायथन फ़ंक्शन लिखें, जहाँ n को तर्क के रूप में प्रदान किया गया है
+def fibonacci_recursive(n):
+   if n <= 1:
+       return n
+   else:
+       return (recur_fibo(n-1) + recur_fibo(n-2))
+
+
+# एक पायथन फ़ंक्शन लिखें जो दिए गए इनपुट फ़ाइल पथ को पढ़ेगा और इसकी सामग्री को प्रिंट करेगा
+def read_and_print_file(filepath):
+    with open(filepath, "r") as infile:
+        print( infile.read() )
+
+
+# एक पायथन प्रोग्राम लिखें जो लूप के लिए उपयोग करके पहले n पॉजिटिव पूर्णांक को प्रिंट करेगा
+n = 62
+for num in range(n):
+    print(num)
+
+
+# एक पायथन फ़ंक्शन लिखें जो आरोही क्रम में क्रमबद्ध इनपुट सूची देता है
+def sort_ascending(list_to_be_sorted):
+    return sorted(list_to_be_sorted)
+
+
+# एक पायथन फ़ंक्शन लिखें जो अवरोही क्रम में क्रमबद्ध इनपुट सूची देता है
+def sort_descending(list_to_be_sorted):
+    return sorted(list_to_be_sorted, reverse=True)
+
+
+# एक पायथन फ़ंक्शन लिखें जो पहले n प्राकृतिक संख्याओं का योग लौटाएगा, जहाँ n इनपुट है
+def sum_first_n(n):
+    return ( n * (n+1) ) // 2
+
+
+# एक पुनरावर्ती पायथन फ़ंक्शन लिखें जो पहले n प्राकृतिक संख्याओं का योग लौटाएगा, जहाँ n इनपुट है
+def sum_first_n_recursive(n):
+    if n == 0:
+        return 0
+    return sum_first_n_recursive(n-1) + n
+
+
+# एक पायथन फ़ंक्शन लिखें जो शब्दकोशों की एक सूची को फ़िल्टर करेगा जहां एक निर्दिष्ट कुंजी दिए गए मान के बराबर है, list_of_dictionaries, key और value इस फ़ंक्शन के इनपुट हैं।
+def filter_with_key_value(list_of_dicts, key, value):
+    return list( filter( lambda x: x.get(key) == value, list_of_dicts ) )
+
+
+# एक पुनरावर्ती पायथन फ़ंक्शन लिखें जो इनपुट के रूप में या तो एक सूची या टपल लेता है और इसके तत्वों के क्रम को उलट देता है
+def reverse(seq):
+    SeqType = type(seq)
+    emptySeq = SeqType()
+    if seq == emptySeq:
+        return emptySeq
+    restrev = reverse(seq[1:])
+    first = seq[0:1]
+    result = restrev + first
+    return result
+
+
+# एक पायथन फ़ंक्शन लिखें जो किसी दिए गए इनपुट नंबर का वर्ग लौटाता है
+def square(x):
+    return x**2
+
+
+# एक पायथन फ़ंक्शन लिखें जो दी गई सूची या टपल या स्ट्रिंग पर चयन सॉर्ट करता है और नया क्रमबद्ध अनुक्रम देता है
+def selection_sort(list_to_be_sorted):
+    sorted_list = list_to_be_sorted[:]
+    for i in range(len(sorted_list)):
+        new_min = sorted_list[i]
+        new_min_old_place = i
+        for j in range(i+1, len(sorted_list)):
+            if new_min > sorted_list[j]:
+                new_min = sorted_list[j]
+                new_min_old_place = j
+        old_val = sorted_list[i]
+        sorted_list[i] = new_min
+        sorted_list[new_min_old_place] = old_val
+    return sorted_list
+
+
+# एक पायथन प्रोग्राम लिखें जो उपयोगकर्ता इनपुट मांगता है और दिए गए इनपुट को प्रिंट करता है
+a = input("User Input")
+print(a)
+
+
+# दिए गए माध्य और मानक विचलन द्वारा दी गई सूची में सभी संख्याओं को शिफ्ट और स्केल करने के लिए एक पायथन फ़ंक्शन लिखें
+def shift_and_scale(list_of_nums, mean, std):
+    return [ (x-mean) / std for x in list_of_nums ]
+
+
+# एक पायथन फ़ंक्शन लिखें जो अनुक्रमों की एक सूची लेता है और सूची से प्रत्येक संबंधित तत्व को एक टुपल में ज़िप करता है और ऐसे टुपल्स की सूची देता है
+def zip_(list_of_seq):
+    return list(zip(*list_of_seq))
+
+
+# एक पायथन प्रोग्राम लिखें जो उपयोगकर्ता को 1 और 5 के बीच की संख्या का अनुमान लगाने और 3 अनुमानों के भीतर अनुमान लगाने के लिए कहता है
+print("Please guess a number between 1 and 5 and I will guess within 3 chances!")
+guess1 = input("Is it <= 3? enter y/n \n")
+if guess1 == "y":
+    guess2 = input("Is it <= 2? enter y/n \n")
+    if guess2 == "y":
+        guess3 = input("Is it 1? enter y/n \n")
+        if guess3 == "y":
+            print("Yay! found the number, its 1")
+        else:
+            print("Yay! found the number, its 2")
+    else:
+        print("Yay! found the number, its 3")
+else:
+    guess2 = input("Is it 4? enter y/n \n")
+    if guess2 == "y":
+        print("Yay! found the number, its 4")
+    else:
+        print("Yay! found the number, its 5")
+
+
+# अजगर प्रोग्राम लिखें जो पहले में दूसरे को जोड़कर दो शब्दकोशों को मिला देगा
+a = {"a": 1, "b": 3}
+b = {"c": 1, "d": 3}
+a.update(b)
+
+
+# एक पायथन फ़ंक्शन लिखें जो दिए गए स्ट्रिंग को उलट देगा
+def reverse_string(str_to_be_reversed):
+    return str_to_be_reversed[::-1]
+
+
+# एक पायथन प्रोग्राम लिखें जो "हैलो वर्ल्ड" प्रिंट करेगा
+print("Hello World")
+
+
+# एक पायथन प्रोग्राम लिखें जो परिवर्तनीय मानों को स्वैप करेगा
+a = 10
+b = 15
+a, b = b, a
+
+
+# एक पायथन प्रोग्राम लिखें जो एक शब्दकोश पर पुनरावृति करता है और इसकी कुंजियों और मूल्यों को प्रिंट करता है
+a = {"a":1, "b":2, "c":3, "d":4}
+for k, v in a.items():
+    print(k, v)
+
+
+# एक पायथन फ़ंक्शन लिखें जो किसी दिए गए वर्ण के ASCII मान को प्रिंट करेगा
+def print_ascii(char):
+    print(ord(char))
+
+
+# एक पायथन फ़ंक्शन लिखें जो दो संख्याओं में लेता है और उनका एचसीएफ देता है
+def hcf(num1, num2):
+    smaller = num1 if num1 < num2 else num2
+    for i in range(1, smaller+1):
+        if (num1 % i == 0) and (num2 % i == 0):
+            hcf = i
+    return hcf
+
+
+# एक अजगर फ़ंक्शन लिखें जो दो संख्याओं में लेता है और उनका LCM लौटाता है
+def lcm(num1, num2):
+    bigger = num1 if num1 > num2 else num2
+    while True:
+        if (bigger % num1 == 0) and (bigger % num2 == 0):
+            break
+        bigger += 1
+    return bigger
+
+
+# n तक प्राकृतिक संख्याओं के योग की गणना करने के लिए एक पुनरावर्ती पायथन फ़ंक्शन लिखें, जहाँ n एक तर्क है
+def recursive_sum(n):
+    if n <= 1:
+        return n
+    else:
+        return n + recursive_sum(n-1)
+
+
+# एक पायथन फ़ंक्शन लिखें जो किसी सूची के अंतिम तत्व को हटा देता है और सूची और हटाए गए तत्व को वापस कर देता है
+def delete_last_element(list_to_be_processed):
+    deleted_element = list_to_be_processed.pop()
+    return list_to_be_processed, deleted_element
+
+
+# एक पायथन फ़ंक्शन लिखें जो एक सूची लेता है और एक सूची देता है जिसमें इनपुट सूची के तत्वों के वर्ग होते हैं
+def square_list_elements(list_to_be_squared):
+    return list( map(lambda x: x**2, list_to_be_squared) )
+
+
+# एक पायथन फ़ंक्शन लिखें जो किसी दिए गए नंबर की वर्गमूल पाता है, यदि वर्गमूल एक पूर्णांक है, तो संदेश देता है "Error - the square root is not an integer"
+def find_integer_square_roots(num):write a python function that finds square roots of a given number, if the square root is an integer, else returns the message "Error - the square root is not an integer"
+    found = False
+    for k in range(1, (num//2)+1):
+        if ((k**2)==num):
+            found = True
+            break
+    if not found:
+        return "Error - the square root is not an integer"
+    return -k, k
+
+
+# एक पायथन प्रोग्राम लिखें जो थोड़ी देर के लूप का उपयोग करके दी गई संख्या से कम या उसके बराबर प्राकृतिक संख्या को प्रिंट करता है
+input_num = 27
+while input_num:
+    print(input_num)
+    input_num -= 1
+
+
+# एक पायथन फ़ंक्शन लिखें जो दो नंबर लेता है। फ़ंक्शन पहली संख्या को दूसरी संख्या से विभाजित करता है और उत्तर देता है। यदि दूसरी संख्या 0 है, तो फ़ंक्शन कोई नहीं देता है
+def divide(num1, num2):
+    if num2 == 0:
+        return
+    else:
+        return num1 / num2
+
+
+# फॉर लूप के साथ else का एक पायथन प्रोग्राम लिखें
+seq = "abcde"
+for k in seq:
+    if k == "f":
+        break
+else:
+    print("f Not Found!")
+
+
+# एक पुनरावर्ती पायथन फ़ंक्शन लिखें जो दी गई सूची या टपल या स्ट्रिंग पर मर्ज सॉर्ट करता है और नए क्रमबद्ध अनुक्रम को वापस करता है
+def sort_and_merge(l1, l2):
+    new_list = []
+    i = 0
+    j = 0
+    l1_len = len(l1)
+    l2_len = len(l2)
+    while (i <= l1_len-1) and (j <= l2_len-1):
+        if l1[i] < l2[j]:
+            new_list.append(l1[i])
+            i +=1
+        else:
+            new_list.append(l2[j])
+            j +=1
+    if i <= (l1_len-1):
+        new_list += l1[i:]
+    if j <= (l2_len-1):
+        new_list += l2[j:]
+    return new_list
+
+def recursive_merge_sort(list_to_be_sorted):
+    final_list = []
+    first = 0
+    last = len(list_to_be_sorted)
+    if last <= 1:
+        final_list.extend( list_to_be_sorted )
+    else:
+        mid = last // 2
+        l1 = recursive_merge_sort( list_to_be_sorted[:mid] )
+        l2 = recursive_merge_sort( list_to_be_sorted[mid:] )
+        final_list.extend( sort_and_merge( l1, l2 ) )
+    return final_list
+
+# किसी सूची में संख्याओं का माध्य वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_mean(num_list:list)->float:
+    if num_list:
+        return sum(num_list)/len(num_list)
+    else:
+        return None
+
+# किसी सूची में संख्याओं का माध्य लौटाने के लिए एक फ़ंक्शन लिखें
+def cal_median(num_list:list)->float:
+    if num_list:
+        if len(num_list)%2 != 0:
+            return sorted(num_list)[int(len(num_list)/2) - 1]
+        else:
+            return (sorted(num_list)[int(len(num_list)/2) - 1] + sorted(num_list)[int(len(num_list)/2)])/2
+    else:
+        return None
+
+# हेरोस सूत्र द्वारा त्रिभुज का क्षेत्रफल लौटाने के लिए एक फंक्शन लिखिए
+def cal_triangle_area(a:float,b:float,c:float)->float:
+    if a or b or c:
+        s = (a+b+c)/2
+        if s>a and s>b and s>c:
+            area = (s*(s-a)*(s-b)*(s-c))**(1/2)
+            return round(area,2)
+        else:
+            return None
+    return None
+
+# एक समबाहु त्रिभुज का क्षेत्रफल वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_eq_triangle_area(a:float)->float:
+    if a:
+        return (3**(1/2))*(a**2)/4
+    else:
+        return None
+
+# समकोण त्रिभुज का क्षेत्रफल लौटाने के लिए एक फंक्शन लिखिए
+
+def cal_rt_triangle_area(base:float,height:float)->float:
+    if base and height:
+        return (base*height)/2
+    else:
+        return None
+
+# उत्पत्ति से किसी बिंदु की कार्टिसियन दूरी वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_dist_from_orign(x:float,y:float)->float:
+    return (x**2+y**2)**(1/2)
+
+# दो बिंदुओं के बीच कार्टिसियन दूरी वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_cart_distance(x1:float,y1:float,x2:float,y2:float)->float:
+    return ((x1-x2)**2+(y1-y2)**2)**(1/2)
+
+# द्विघात समीकरण ax**2 + bx + c = 0 के प्रकार की जड़ें वापस करने के लिए एक फ़ंक्शन लिखें
+def root_type(a:float,b:float,c:float):
+    if b**2-4*a*c >= 0:
+        return 'real'
+    else:
+        return 'imaginary'
+
+# द्विघात समीकरण ax**2 + bx + c = 0 की जड़ों का योग वापस करने के लिए एक फ़ंक्शन लिखें
+def sum_of_roots(a:float,c:float):
+    if a:
+        return c/a
+    else:
+        return None
+
+# द्विघात समीकरण ax**2 + bx + c = 0 के मूलों का गुणनफल लौटाने के लिए एक फ़ंक्शन लिखें
+def prod_of_roots(a:float,b:float):
+    if a:
+        return -b/a
+    else:
+        return None
+
+# एक द्विघात समीकरण की जड़ों के वास्तविक को वापस करने के लिए एक फ़ंक्शन लिखें अन्यथा कोई नहीं ax**2 + bx + c = 0 लौटाएं
+def roots_of_qad_eq(a:float,b:float,c:float):
+    d = b**2-4*a*c
+    if d >= 0:
+        return (-b+(d)**(1/2))/2*a,(-b-(d)**(1/2))/2*a
+    else:
+        return None
+
+# लागत मूल्य और विक्रय मूल्य के आधार पर लाभ या हानि वापस करने के लिए एक फ़ंक्शन लिखें
+def find_profit_or_loss(cp,sp):
+    if cp > sp:
+        return 'loss', cp-sp
+    elif cp < sp:
+        return 'profit', sp-cp
+    else:
+        return 'no profit or loss', 0
+
+# एक आयत का क्षेत्रफल वापस करने के लिए एक फंक्शन लिखें
+def cal_area_rect(length, breadth):
+    return length*breadth
+
+# एक वर्ग का क्षेत्रफल वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_area_square(side):
+    return side**2
+
+# विकर्ण q1 और q2 वाले समचतुर्भुज का क्षेत्रफल वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_area_rhombus(q1,q2):
+    return (q1*q2)/2
+
+# आधार आधार b और समानांतर भुजाओं के बीच ऊँचाई h वाले समलंब का क्षेत्रफल लौटाने के लिए एक फलन लिखिए
+def cal_area_trapezium(a,b,h):
+    return h*(a+b)/2
+
+# त्रिज्या r के एक वृत्त का क्षेत्रफल वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_area_circle(r):
+    pi = 3.14
+    return pi*r**2
+
+# एक वृत्त की परिधि वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_circumference(r):
+    pi = 3.14
+    return 2*pi*r
+
+# आयत की परिधि वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_perimeter_rect(length, bredth):
+    return 2*(length+bredth)
+
+# त्रिकोण की परिधि वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_perimeter_triangle(s1,s2,s3):
+    return s1+s2+s3
+
+# एक वर्ग की परिधि वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_perimeter_square(side):
+    return 4*side
+
+# एक समबाहु त्रिभुज की परिधि वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_perimeter_eq_triangle(a):
+    return 3*a
+
+# समद्विबाहु त्रिभुज की परिधि वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_perimeter_iso_triangle(s1,s2):
+    return 2*s1+s2
+
+# दीर्घवृत्त का क्षेत्रफल लौटाने के लिए एक फंक्शन लिखिए
+def cal_area_ellipse(minor, major):
+    pi = 3.14
+    return pi*(minor*major)
+
+# एक सिलेंडर के पार्श्व सतह क्षेत्र को वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_cylinder_lat_surf_area(height,radius):
+    pi=3.14
+    return 2*pi*radius*height
+
+# एक शंकु के वक्र पृष्ठीय क्षेत्रफल को लौटाने के लिए एक फ़ंक्शन लिखिए
+def cal_cone_curved_surf_area(slant_height,radius):
+    pi=3.14
+    return pi*radius*slant_height
+
+# भुजा a वाले घन का कुल पृष्ठीय क्षेत्रफल लौटाने के लिए एक फ़ंक्शन लिखिए
+def cal_surface_area_cube(a):
+    return 6*(a**2)
+
+# लम्बाई l, चौड़ाई b और ऊँचाई h वाले घनाभ का कुल पृष्ठीय क्षेत्रफल प्राप्त करने के लिए एक फ़ंक्शन लिखिए
+def cal_surface_area_cuboid(l,b,h):
+    return 2*(l*b+b*h+h*l)
+
+# एक गोले का पृष्ठीय क्षेत्रफल लौटाने के लिए एक फ़ंक्शन लिखिए
+def cal_area_sphere(radius):
+    pi = 3.14
+    return 4*pi*(radius**2)
+
+# अर्ध-गोले का पृष्ठीय क्षेत्रफल लौटाने के लिए एक फ़ंक्शन लिखिए
+def cal_area_hemisphere(radius):
+    pi = 3.14
+    return 2*pi*(radius**2)
+
+# एक सिलेंडर के कुल सतह क्षेत्र को वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_cylinder_surf_area(height,radius):
+    pi=3.14
+    return 2*pi*radius**2*+2*pi*radius*height
+
+# शंकु के पार्श्व सतह क्षेत्र को वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_cone_lateral_surf_area(height,radius):
+    pi=3.14
+    return pi*radius*(((height**2)+(radius**2))**(1/2))
+
+# एक सिलेंडर का आयतन वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_cylinder_volume(height, radius):
+    pi=3.14
+    return pi*(radius**2)*height
+
+# शंकु का आयतन वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_cone_volume(height,radius):
+    pi=3.14
+    return pi*(radius**2)*height/3
+
+# हेमी गोले का आयतन वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_hemisphere_volume(radius:float)->float:
+    pi=3.14
+    return (2/3)*pi*(radius**3)
+
+# एक गोले का आयतन वापस करने के लिए एक फंक्शन लिखें
+def cal_sphere_volume(radius:float)->float:
+    pi=3.14
+    return (4/3)*pi*(radius**3)
+
+# घनाभ का आयतन वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_cuboid_volume(length:float, breadth:float, height:float)->float:
+    return length*breadth*height
+
+# क्यूब का आयतन वापस करने के लिए एक फंक्शन लिखें
+def cal_cube_volume(side:float)->float:
+    return side**3
+
+# दिए गए समय में तय की गई दूरी के आधार पर गतिमान वस्तु की गति वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_speed(distance:float,time:float)->float:
+    return distance/time
+
+# गतिमान वस्तु द्वारा तय की गई दूरी को खर्च और दिए गए समय के आधार पर वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_distance(time:float,speed:float)->float:
+    return time*speed
+
+# दिए गए समय में तय की गई दूरी के आधार पर चलती हुई वस्तु द्वारा दिए गए समय को वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_time(distance:float,speed:float)->float:
+    return distance/speed
+
+# टोक़ को वापस करने के लिए एक फ़ंक्शन लिखें जब एक बल force को कोण theta पर लागू किया जाता है और रोटेशन के अक्ष के लिए लगाए गए बल की दूरी r होती है
+def cal_torque(force:float,theta:float,r:float)->float:
+    import math
+    return force*r*math.sin(theta)
+
+# रेडियन इकाई में तय की गई अधिक दूरी और लिए गए समय के आधार पर कोणीय वेग वापस करने के लिए एक फ़ंक्शन लिखें
+def cal_angular_velocity(angular_dist:float,time:float)->float:
+    return angular_dist/time
+
+# लेंस की फोकल लंबाई की गणना करने के लिए एक फ़ंक्शन लिखें, लेंस से वस्तु की दूरी और छवि की दूरी खरीदें
+def cal_focal_length_of_lense(u:float,v:float)->float:
+    return (u*v)/(u+v)
+
+# द्रव्यमान m1 और m2 की दो वस्तुओं के बीच गुरुत्वाकर्षण बल और उनके बीच r की दूरी की गणना करने के लिए एक फ़ंक्शन लिखें
+def cal_gforce(mass1:float,mass2:float, distance:float)->float:
+    g = 6.674*(10)**(-11)
+    return (g*mass1*mass2)/(distance**2)
+
+# उस धारा में धारा की गणना करने के लिए एक फ़ंक्शन लिखें जहां प्रतिरोध R है और वोल्टेज V है
+def cal_current(resistance:float, voltage:float)->float:
+    return voltage/resistance
+
+# किसी दी गई सूची में समानांतर में कैपेसिटर की कुल समाई की गणना करने के लिए एक फ़ंक्शन लिखें
+def cal_total_cap_in_parallel(cap_list:list)->float:
+    return sum(cap_list)
+
+# दी गई सूची में समानांतर में प्रतिरोधों के कुल प्रतिरोध की गणना करने के लिए एक फ़ंक्शन लिखें
+def cal_total_res_in_parallel(res_list:list)->float:
+    return sum([1/r for r in res_list])
+
+# किसी दी गई सूची में श्रृंखला में प्रतिरोधों के कुल प्रतिरोध की गणना करने के लिए एक फ़ंक्शन लिखें
+def cal_total_res_in_series(res_list:list)->float:
+    return sum(res_list)
+
+# द्रव्यमान M और त्रिज्या R की एक अंगूठी की जड़ता के क्षण की गणना करने के लिए एक फ़ंक्शन लिखें
+def cal_mi_ring(mass:float,radius:float)->float:
+    return mass*(radius**2)
+
+
+# द्रव्यमान M और त्रिज्या R के गोले की जड़ता के क्षण की गणना करने के लिए एक फ़ंक्शन लिखें
+def cal_mi_sphere(mass:float,radius:float)->float:
+    return (7/5)*mass*(radius**2)
+
+
+# आदर्श गैस समीकरण के आधार पर आदर्श गैस के दबाव P की गणना करने के लिए एक फ़ंक्शन लिखें - आयतन V और तापमान T दिए गए हैं
+def find_pressure_of_ideal_gas(volume:float, temp:float,n:float)->float:
+    r = 8.3145 # gas constant R
+    return (n*r*temp)/volume
+
+# दिए गए आदर्श गैस समीकरण दाब P तथा तापमान T के आधार पर आदर्श गैस के आयतन V की गणना करने के लिए एक फ़ंक्शन लिखिए
+def find_volume_of_ideal_gas(pressure:float, temp:float,n:float)->float:
+    r = 8.3145 # gas constant R
+    return (n*r*temp)/pressure
+
+# दिए गए आदर्श गैस समीकरण दाब P और आयतन V के आधार पर आदर्श गैस के तापमान T की गणना करने के लिए एक फ़ंक्शन लिखें
+
+def find_temp_of_ideal_gas(pressure:float, volume:float,n:float)->float:
+    r = 8.3145 # gas constant R
+    return (pressure*volume)/n*r
+
+# किसी वस्तु के प्रारंभिक वेग u, समय t और त्वरण a के साथ वेग की गणना करने के लिए एक फ़ंक्शन लिखें
+def cal_final_velocity(initial_velocity:float,accelration:float,time:float)->float:
+    return initial_velocity + accelration*time
+
+# किसी वस्तु के प्रारंभिक वेग u, समय t और त्वरण a के साथ विस्थापन की गणना करने के लिए एक फ़ंक्शन लिखें
+def cal_displacement(initial_velocity:float,accelration:float,time:float)->float:
+    return initial_velocity*time + .5*accelration*(time)**2
+
+# प्रारंभिक मात्रा और आधा जीवन के आधार पर शेष रेडियोधर्मी तत्व की मात्रा की गणना करने के लिए एक फ़ंक्शन लिखें
+def cal_half_life(initail_quatity:float, time_elapsed:float, half_life:float)->float:
+    return initail_quatity*((1/2)**(time_elapsed/half_life))
+
+# छूट प्रतिशत के आधार पर नए विक्रय मूल्य की गणना करने के लिए एक फ़ंक्शन लिखें
+def cal_sp_after_discount(sp:float,discount:float)->float:
+    return sp*(1 - discount/100)
+
+# वर्ष y में मूलधन p, दर r और समय के लिए साधारण ब्याज की गणना करने के लिए एक फ़ंक्शन लिखें
+def get_si(p:float, r:float, t:float)->float:
+    return (p*r*t)/100
+
+# वर्ष y में मूलधन p, दर r और समय के लिए चक्रवृद्धि ब्याज की गणना करने के लिए एक फ़ंक्शन लिखें
+def get_ci(p:float, r:float, t:float, n:float)->float:
+    return round(p*((1+(r/(n*100)))**(n*t)) - p,2)
+
+# द्रव्यमान m को kg में ऊर्जा में परिवर्तित करने पर निर्मुक्त ऊर्जा की गणना करने के लिए एक फ़ंक्शन लिखिए
+def cal_energy_by_mass(mass:float)->float:
+    c = 300000
+    return mass * (c**2)
+
+# द्रव्यमान m और वेग v की वस्तु की गतिज ऊर्जा की गणना करने के लिए एक फ़ंक्शन लिखें
+def cal_ke(mass:float,velocity:float)->float:
+    return (mass*(velocity)**2)/2
+
+# ऊँचाई h पर m द्रव्यमान की वस्तु की स्थितिज ऊर्जा की गणना करने के लिए एक फलन लिखिए
+def cal_pe(mass:float,height:float)->float:
+    g = 9.8
+    return (mass*g*height)
+
+# d दूरी पर q1 और q2 आवेश वाले दो आवेशित कणों के बीच इलेक्ट्रोस्टैटिक बल की गणना करने के लिए एक फ़ंक्शन लिखें
+def cal_electrostatic_force(q1,q2,d):
+    k = 9*(10**9)
+    return (k*q1*q2)/(d**2)
+
+# दिए गए द्रव्यमान और आयतन के घनत्व की गणना करने के लिए एक फ़ंक्शन लिखें
+def cal_density(mass,volume):
+    return (mass/volume)
+
+# तापमान सेल्सियस c को फ़ारेनहाइट f या फ़ारेनहाइट को सेल्सियस में बदलने के लिए एक फ़ंक्शन लिखें
+ def temp_converter(temp,temp_given_in = 'f'):
+    # Return the converted temprature
+    if temp_given_in.lower() == 'f': # Convert to C
+        return (temp - 32) * (5/9)
+    else: # Convert to F
+        return (temp * 9/5) + 32
+
+
+
+# पायथन कोड शब्दकोशों को मर्ज करने के लिए
+def merge1():
+    test_list1 = [{"a": 1, "b": 4}, {"c": 10, "d": 15},
+                  {"f": "gfg"}]
+    test_list2 = [{"e": 6}, {"f": 3, "fg": 10, "h": 1},
+                  {"i": 10}]
+    print("The original list 1 is : " + str(test_list1))
+    print("The original list 2 is : " + str(test_list2))
+    for idx in range(0, len(test_list1)):
+        id_keys = list(test_list1[idx].keys())
+        for key in test_list2[idx]:
+
+            if key not in id_keys:
+                test_list1[idx][key] = test_list2[idx][key]
+
+    print("The Merged Dictionary list : " + str(test_list1))
+
+
+
+# मैट्रिक्स के लंबवत संयोजन के लिए पायथन प्रोग्राम
+def vertical_concatenation():
+    test_list = [["this","is"], ["program", "for"], ["vertical","concatenation"]]
+    print("The original list : " + str(test_list))
+    res = []
+    N = 0
+    while N != len(test_list):
+        temp = ''
+        for idx in test_list:
+            try: temp = temp + idx[N]
+            except IndexError: pass
+        res.append(temp)
+        N = N + 1
+    res = [ele for ele in res if ele]
+    print("List after column Concatenation : " + str(res))
+vertical_concatenation()
+
+
+# मैट्रिक्स का Kth कॉलम प्राप्त करने के लिए पायथन कोड
+
+def kth_column(test_list=[[4, 5, 6], [8, 1, 10], [7, 12, 5]],k=2):
+
+    print("The original list is : " + str(test_list))
+    K =k
+    res = list(zip(*test_list)[K])
+    print("The Kth column of matrix is : " + str(res))
+
+
+# पुनरावर्तन का उपयोग करके सभी संभावित उपसरणियों को प्रिंट करने के लिए पायथन कोड
+
+def printSubArrays(arr, start, end):
+    if end == len(arr):
+        return
+    elif start > end:
+        return printSubArrays(arr, 0, end + 1)
+    else:
+        print(arr[start:end + 1])
+        return printSubArrays(arr, start + 1, end)
+
+arr = [1, 2, 3]
+printSubArrays(arr, 0, 0)
+
+# पुनरावर्तन का उपयोग करके नेस्टेड सूची का योग खोजने के लिए पायथन प्रोग्राम
+total = 0
+def sum_nestedlist(l):
+    global total
+    for j in range(len(l)):
+        if type(l[j]) == list:
+
+            sum_nestedlist(l[j])
+        else:
+            total += l[j]
+
+sum_nestedlist([[1, 2, 3], [4, [5, 6]], 7])
+print(total)
+
+# पायथन प्रोग्राम रिकर्सन का उपयोग करके संख्या की शक्ति खोजने के लिए
+def power(N, P):
+    if (P == 0 or P == 1):
+        return N
+    else:
+        return (N * power(N, P - 1))
+
+print(power(5, 2))
+
+
+# विशिष्ट स्थान पर सबस्ट्रिंग के साथ फ़िल्टर स्ट्रिंग के लिए पायथन कार्यक्रम
+def f_substring():
+    test_list = ['program ', 'to', 'filter', 'for', 'substring']
+    print("The original list is : " + str(test_list))
+    sub_str = 'geeks'
+    i, j = 0, 5
+    res = list(filter(lambda ele: ele[i: j] == sub_str, test_list))
+    print("Filtered list : " + str(res))
+
+
+# पायथन कोड स्ट्रिंग से विराम चिह्न को दूर करने के लिए
+def r_punc():
+    test_str = "end, is best : for ! Nlp ;"
+    print("The original string is : " + test_str)
+    punc = '''!()-[]{};:'"\, <>./?@#$%^&*_~'''
+    for ele in test_str:
+        if ele in punc:
+            test_str = test_str.replace(ele, "")
+    print("The string after punctuation filter : " + test_str)
+
+
+htness_4
+
+
+# ग्नोम सॉर्ट को लागू करने के लिए पायथन प्रोग्राम
+def gnomeSort(arr, n):
+    index = 0
+    while index < n:
+        if index == 0:
+            index = index + 1
+        if arr[index] >= arr[index - 1]:
+            index = index + 1
+        else:
+            arr[index], arr[index - 1] = arr[index - 1], arr[index]
+            index = index - 1
+    return arr
+arr = [34, 2, 10, -9]
+n = len(arr)
+arr = gnomeSort(arr, n)
+print("Sorted seqquence after applying Gnome Sort :")
+for i in arr:
+    print(i)
+
+
+# पिजनहोल सॉर्ट लागू करने के लिए पायथन प्रोग्राम
+def pigeonhole_sort(a):
+    my_min = min(a)
+    my_max = max(a)
+    size = my_max - my_min + 1
+    holes = [0] * size
+    for x in a:
+        assert type(x) is int, "integers only please"
+        holes[x - my_min] += 1
+    i = 0
+    for count in range(size):
+        while holes[count] > 0:
+            holes[count] -= 1
+            a[i] = count + my_min
+            i += 1
+a = [8, 3, 2, 7, 4, 6, 8]
+print("Sorted order is : ", end=" ")
+pigeonhole_sort(a)
+for i in range(0, len(a)):
+    print(a[i], end=" ")
+
+
+
+# स्टोगे सॉर्ट को लागू करने के लिए पायथन प्रोग्राम
+def stoogesort(arr, l, h):
+    if l >= h:
+        return
+    if arr[l] > arr[h]:
+        t = arr[l]
+        arr[l] = arr[h]
+        arr[h] = t
+    if h - l + 1 > 2:
+        t = (int)((h - l + 1) / 3)
+        stoogesort(arr, l, (h - t))
+        stoogesort(arr, l + t, (h))
+        stoogesort(arr, l, (h - t))
+
+arr = [2, 4, 5, 3, 1]
+n = len(arr)
+stoogesort(arr, 0, n - 1)
+for i in range(0, n):
+    print(arr[i], end= \' \')
+
+# पायथन प्रोग्राम दो समय के बीच अंतर खोजने के लिए
+
+def difference(h1, m1, h2, m2):
+
+    t1 = h1 * 60 + m1
+    t2 = h2 * 60 + m2
+    if (t1 == t2):
+        print("Both are same times")
+        return
+    else:
+        diff = t2 - t1
+    h = (int(diff / 60)) % 24
+    m = diff % 60
+    print(h, ":", m)
+difference(7, 20, 9, 45)
+difference(15, 23, 18, 54)
+difference(16, 20, 16, 20)
+
+
+# समय को 12 घंटे से 24 घंटे के प्रारूप में बदलने के लिए पायथन प्रोग्राम
+def convert24(str1):
+    if str1[-2:] == "AM" and str1[:2] == "12":
+        return "00" + str1[2:-2]
+    elif str1[-2:] == "AM":
+        return str1[:-2]
+
+    elif str1[-2:] == "PM" and str1[:2] == "12":
+        return str1[:-2]
+    else:
+        return str(int(str1[:2]) + 12) + str1[2:8]
+print(convert24("08:05:45 PM"))
+
+
+# किसी दिए गए कोण के लिए समय खोजने के लिए पायथन 3 प्रोग्राम।
+
+def calcAngle(hh, mm):
+    hour_angle = 0.5 * (hh * 60 + mm)
+    minute_angle = 6 * mm
+    angle = abs(hour_angle - minute_angle)
+    angle = min(360 - angle, angle)
+    return angle
+
+
+# अजगर फ़ंक्शन हर समय प्रिंट करने के लिए जब घंटे हाथ और मिनट के बीच का कोण
+def printTime(theta):
+    for hh in range(0, 12):
+        for mm in range(0, 60):
+            if (calcAngle(hh, mm) == theta):
+                print(hh, ":", mm, sep="")
+                return
+    print("Input angle not valid.")
+    return
+theta = 90.0
+printTime(theta)
+
+# किसी फ़ंक्शन को कॉल करने की संख्या की गणना करने के लिए एक पायथन फ़ंक्शन लिखें
+def counter(fn):
+    count = 0
+    def inner(*args, **kwargs):
+        nonlocal count
+        count += 1
+        print(f'Function {fn.__name__} was called {count} times.')
+        return fn(*"args, **kwargs)    
+    return inner
+
+# सूची से डुप्लिकेट आइटम निकालने के लिए एक पायथन फ़ंक्शन लिखें
+def remove_duplicatesinlist(lst):
+    return len(lst) == len(set(lst))
+
+# उपयोगकर्ता द्वारा दिए गए फ़ंक्शन को निष्पादित करने में कितना समय लगता है, यह जानने के लिए एक पायथन डेकोरेटर फ़ंक्शन लिखें
+def timed(fn):
+    from time import perf_counter
+    from functools import wraps
+
+    @wraps(fn) 
+    def inner(*args, **kwargs):
+        start = perf_counter()
+        result = fn(*args, **kwargs)
+        end = perf_counter()
+        elapsed = end - start
+
+        args_ = [str(a) for a in args]
+        kwargs_ = ['{0}={1}'.format(k, v) for k, v in kwargs.items()]
+        all_args = args_ + kwargs_
+        args_str = ','.join(all_args) # now it is comma delimited
+
+        print(f'{fn.__name__}({args_str}) took {elapsed} seconds')
+
+        return result
+    # inner = wraps(fn)(inner)
+    return inner
+
+# मानचित्र का उपयोग करके दो उपयोगकर्ता परिभाषित सूची को जोड़ने और प्रिंट करने के लिए एक पायथन प्रोग्राम लिखें
+input_string = input("Enter a list element separated by space ")
+list1  = input_string.split()
+input_string = input("Enter a list element separated by space ")
+list2  = input_string.split()
+list1 = [int(i) for i in list1] 
+list2 = [int(i) for i in list2] 
+result = map(lambda x, y: x + y, list1, list2) 
+print(list(result))
+
+# तारों की सूची को पूर्णांकों की सूची में बदलने के लिए एक पायथन फ़ंक्शन लिखें
+def stringlist_to_intlist(sList): 
+  return(list(map(int, sList)))
+
+# ज़िप का उपयोग करके एकाधिक सूचियों को मैप करने के लिए एक पायथन फ़ंक्शन लिखें
+def map_values(*args):
+  return set(zip(*args))
+
+# उपज का उपयोग करके संख्याओं के अनंत वर्ग उत्पन्न करने के लिए पायथन में जेनरेटर फ़ंक्शन लिखें
+def nextSquare(): 
+    i = 1;  
+    # An Infinite loop to generate squares  
+    while True: 
+        yield i*i                 
+        i += 1
+
+# फाइबोनैचि संख्या उत्पन्न करने के लिए एक पायथन जनरेटर फ़ंक्शन लिखें
+def fib(limit): 
+    # Initialize first two Fibonacci Numbers  
+    a, b = 0, 1  
+    # One by one yield next Fibonacci Number 
+    while a < limit: 
+        yield a 
+        a, b = b, a + b
+
+# एक पायथन प्रोग्राम लिखें जो उपयोगकर्ता इनपुट टपल लेता है और प्रत्येक टपल तत्व की लंबाई प्रिंट करता है
+userInput = input("Enter a tuple:")
+x = map(lambda x:len(x), tuple(x.strip() for x in userInput.split(',')))
+print(list(x))
+
+# सूची में सम संख्याओं को खोजने के लिए सूची समझ का उपयोग करके एक पायथन फ़ंक्शन लिखें
+def find_evennumbers(input_list):
+  list_using_comp = [var for var in input_list if var % 2 == 0] 
+  return list_using_comp
+
+# ज़िप का उपयोग करके दो सूचियों का शब्दकोश वापस करने के लिए एक पायथन फ़ंक्शन लिखें
+def dict_using_comp(list1, list2):
+  dict_using_comp = {key:value for (key, value) in zip(list1, list2)} 
+  return dict_using_comp
+
+# Google अपवित्रता URL से अपवित्रता वाले शब्दों की सूची प्राप्त करने के लिए एक फ़ंक्शन लिखें
+def profanitytextfile():
+    url = "https://github.com/RobertJGabriel/Google-profanity-words/blob/master/list.txt"
+    html = urlopen(url).read()
+    soup = BeautifulSoup(html, features="html.parser")
+
+    textlist = []
+    table = soup.find('table')
+    trs = table.find_all('tr')
+    for tr in trs:
+        tds = tr.find_all('td')
+        for td in tds:
+            textlist.append(td.text)
+    return textlist
+
+# एक स्ट्रिंग में सबसे बड़ा अक्षर खोजने के लिए एक पायथन प्रोग्राम लिखें
+bigChar = lambda word: reduce(lambda x,y: x if ord(x) > ord(y) else y, word)
+
+# heap का उपयोग करके सूची को सॉर्ट करने के लिए एक पायथन फ़ंक्शन लिखें
+def heapsort(iterable):
+    from heapq import heappush, heappop
+    h = []
+    for value in iterable:
+        heappush(h, value)
+    return [heappop(h) for i in range(len(h))]
+
+# सूची के रूप में पुनरावर्तनीय के पहले n आइटम वापस करने के लिए एक पायथन फ़ंक्शन लिखें
+def take(n, iterable):    
+    import itertools
+    return list(itertools.islice(iterable, n))
+
+# एक पुनरावर्तक के सामने एक एकल मान को आगे बढ़ाने के लिए एक पायथन फ़ंक्शन लिखें
+def prepend(value, iterator):    
+    import itertools
+    return itertools.chain([value], iterator)
+
+# पिछले एन आइटम पर एक पुनरावर्तक वापस करने के लिए एक पायथन फ़ंक्शन लिखें
+def tail(n, iterable):    
+    from collections import deque
+    return iter(deque(iterable, maxlen=n))
+
+# पुनरावर्तक n चरणों को आगे बढ़ाने के लिए एक पायथन फ़ंक्शन लिखें
+def consume(iterator, n=None):
+    import itertools
+    from collections import deque
+    "Advance the iterator n-steps ahead. If n is None, consume entirely."
+    # Use functions that consume iterators at C speed.
+    if n is None:
+        # feed the entire iterator into a zero-length deque
+        deque(iterator, maxlen=0)
+    else:
+        # advance to the empty slice starting at position n
+        next(itertools.islice(iterator, n, n), None)
+
+# nth आइटम या डिफ़ॉल्ट मान वापस करने के लिए एक पायथन फ़ंक्शन लिखें
+def nth(iterable, n, default=None):
+    from itertools import islice
+    return next(islice(iterable, n, None), default)
+
+# यह जांचने के लिए कि क्या सभी तत्व एक दूसरे के बराबर हैं, एक पायथन फ़ंक्शन लिखें
+def all_equal(iterable):
+    from itertools import groupby
+    g = groupby(iterable)
+    return next(g, True) and not next(g, False)
+
+# भविष्यवाणी कितनी बार सत्य है, यह गिनने के लिए एक पायथन फ़ंक्शन लिखें
+def quantify(iterable, pred=bool):
+    return sum(map(pred, iterable))
+
+# अंतर्निहित map() फ़ंक्शन के व्यवहार का अनुकरण करने के लिए एक पायथन फ़ंक्शन लिखें
+def pad_none(iterable):
+    """Returns the sequence elements and then returns None indefinitely.
+
+    Useful for emulating the behavior of the built-in map() function.
+    """
+    from itertools import chain, repeat
+    return chain(iterable, repeat(None))
+
+# अनुक्रम तत्वों को n बार वापस करने के लिए एक पायथन फ़ंक्शन लिखें
+def ncycles(iterable, n):
+    from itertools import chain, repeat
+    return chain.from_iterable(repeat(tuple(iterable), n))
+
+# दो वैक्टरों के डॉट उत्पाद को वापस करने के लिए एक पायथन फ़ंक्शन लिखें
+def dotproduct(vec1, vec2):
+    return sum(map(operator.mul, vec1, vec2))
+
+# नेस्टिंग के एक स्तर को समतल करने के लिए एक पायथन फ़ंक्शन लिखें
+def flatten(list_of_lists):
+    from itertools import chain
+    return chain.from_iterable(list_of_lists)
+
+# निर्दिष्ट तर्कों के साथ कार्य करने के लिए कॉल दोहराने के लिए एक पायथन फ़ंक्शन लिखें
+def repeatfunc(func, times=None, *args):
+    from itertools import starmap, repeat
+    if times is None:
+        return starmap(func, repeat(args))
+    return starmap(func, repeat(args, times))
+
+# पुनरावर्तनीय को जोड़ीदार पुनरावर्तनीय में बदलने के लिए एक पायथन फ़ंक्शन लिखें
+def pairwise(iterable):
+    from itertools import tee
+    a, b = tee(iterable)
+    next(b, None)
+    return zip(a, b)
+
+# निश्चित-लंबाई वाले हिस्सों या ब्लॉकों में डेटा एकत्र करने के लिए एक पायथन फ़ंक्शन लिखें
+def grouper(iterable, n, fillvalue=None):
+    from itertools import zip_longest
+    # grouper('ABCDEFG', 3, 'x') --> ABC DEF Gxx"
+    args = [iter(iterable)] * n
+    return zip_longest(*args, fillvalue=fillvalue)
+
+# राउंड रॉबिन एल्गोरिदम बनाने के लिए एक पायथन प्रोग्राम लिखें: "राउंडरोबिन ('ABC', 'D', 'EF') --> A D E B F C"
+def roundrobin(*iterables):    
+    from itertools import islice, cycle
+    # Recipe credited to George Sakkis
+    num_active = len(iterables)
+    nexts = cycle(iter(it).__next__ for it in iterables)
+    while num_active:
+        try:
+            for next in nexts:
+                yield next()
+        except StopIteration:
+            # Remove the iterator we just exhausted from the cycle.
+            num_active -= 1
+            nexts = cycle(islice(nexts, num_active))
+
+# एक विधेय का उपयोग करने के लिए एक पायथन फ़ंक्शन लिखें और प्रविष्टियों को झूठी प्रविष्टियों और सच्ची प्रविष्टियों में वापस करें
+def partition(pred, iterable):
+    from itertools import filterfalse, tee
+    # partition(is_odd, range(10)) --> 0 2 4 6 8   and  1 3 5 7 9
+    t1, t2 = tee(iterable)
+    return filterfalse(pred, t1), filter(pred, t2)
+
+# पुनरावर्तनीय के पावरसेट को वापस करने के लिए एक पायथन फ़ंक्शन लिखें
+def powerset(iterable):
+    "powerset([1,2,3]) --> () (1,) (2,) (3,) (1,2) (1,3) (2,3) (1,2,3)"
+    from itertools import chain, combinations
+    s = list(iterable)
+    return chain.from_iterable(combinations(s, r) for r in range(len(s)+1))
+
+list(powerset([1,2,3]))
+
+# आदेश को संरक्षित करते हुए सभी अद्वितीय तत्वों को सूचीबद्ध करने के लिए एक पायथन फ़ंक्शन लिखें
+def unique_everseen(iterable, key=None):
+    from itertools import filterfalse
+    # unique_everseen('AAAABBBCCDAABBB') --> A B C D
+    # unique_everseen('ABBCcAD', str.lower) --> A B C D
+    seen = set()
+    seen_add = seen.add
+    if key is None:
+        for element in filterfalse(seen.__contains__, iterable):
+            seen_add(element)
+            yield element
+    else:
+        for element in iterable:
+            k = key(element)
+            if k not in seen:
+                seen_add(k)
+                yield element
+
+# अद्वितीय तत्वों को सूचीबद्ध करने के लिए एक पायथन फ़ंक्शन लिखें, केवल देखे गए तत्व को याद रखने के आदेश को संरक्षित करें।"
+def unique_justseen(iterable, key=None):
+    import operator
+    from itertools import groupby    
+    # unique_justseen('AAAABBBCCDAABBB') --> A B C D A B
+    # unique_justseen('ABBCcAD', str.lower) --> A B C A D
+    return map(next, map(operator.itemgetter(1), groupby(iterable, key)))
+
+# एक अपवाद उठाए जाने तक बार-बार फ़ंक्शन को कॉल करने के लिए एक पायथन फ़ंक्शन लिखें।
+def iter_except(func, exception, first=None):
+    """Converts a call-until-exception interface to an iterator interface.
+    Like builtins.iter(func, sentinel) but uses an exception instead
+    of a sentinel to end the loop.
+    Examples:
+        iter_except(s.pop, KeyError)                             # non-blocking set iterator
+    """
+    try:
+        if first is not None:
+            yield first()            # For database APIs needing an initial cast to db.first()
+        while True:
+            yield func()
+    except exception:
+        pass
+
+# itertools.product(*args, **kwds) से यादृच्छिक चयन वापस करने के लिए एक अजगर फ़ंक्शन लिखें
+def random_product(*args, repeat=1):
+    import random
+    pools = [tuple(pool) for pool in args] * repeat
+    return tuple(map(random.choice, pools))
+
+# itertools.permutations (पुनरावृत्ति, आर) से यादृच्छिक चयन वापस करने के लिए एक अजगर समारोह लिखें
+def random_permutation(iterable, r=None):
+    import random
+    pool = tuple(iterable)
+    r = len(pool) if r is None else r
+    return tuple(random.sample(pool, r))
+
+# itertools.combinations (पुनरावृत्ति, आर) से यादृच्छिक चयन के लिए एक पायथन फ़ंक्शन लिखें
+def random_combination(iterable, r):
+    import random
+    pool = tuple(iterable)
+    n = len(pool)
+    indices = sorted(random.sample(range(n), r))
+    return tuple(pool[i] for i in indices)
+
+# itertools.combinations_with_replacement(iterable, r) से यादृच्छिक चयन करने के लिए एक अजगर फ़ंक्शन लिखें
+def random_combination_with_replacement(iterable, r):
+    import random
+    pool = tuple(iterable)
+    n = len(pool)
+    indices = sorted(random.choices(range(n), k=r))
+    return tuple(pool[i] for i in indices)
+
+# एक्स के बराबर सबसे बाएं मान का पता लगाने के लिए एक पायथन फ़ंक्शन लिखें
+def index(a, x):
+    from bisect import bisect_left    
+    i = bisect_left(a, x)
+    if i != len(a) and a[i] == x:
+        return i
+    raise ValueError
+
+# x से कम सही मूल्य का पता लगाने के लिए एक पायथन फ़ंक्शन लिखें
+def find_lt(a, x):
+    from bisect import bisect_left  
+    i = bisect_left(a, x)
+    if i:
+        return a[i-1]
+    raise ValueError
+
+# x से कम या उसके बराबर सही मूल्य खोजने के लिए एक पायथन फ़ंक्शन लिखें
+def find_le(a, x):
+    from bisect import bisect_right  
+    i = bisect_right(a, x)
+    if i:
+        return a[i-1]
+    raise ValueError
+
+# x से अधिक बाईं ओर का मान खोजने के लिए एक पायथन फ़ंक्शन लिखें
+def find_gt(a, x):
+    from bisect import bisect_right 
+    i = bisect_right(a, x)
+    if i != len(a):
+        return a[i]
+    raise ValueError
+
+# x के बराबर या उससे अधिक बाईं ओर आइटम खोजने के लिए एक पायथन फ़ंक्शन लिखें
+def find_ge(a, x):
+    from bisect import bisect_left 
+    i = bisect_left(a, x)
+    if i != len(a):
+        return a[i]
+    raise ValueError
+
+# bisect का उपयोग करके एक न्यूमेरिक लुकअप को मैप करने के लिए एक पायथन फ़ंक्शन लिखें
+def grade(score, breakpoints=[60, 70, 80, 90], grades='FDCBA'):
+    from bisect import bisect
+    i = bisect(breakpoints, score)
+    return grades[i]
+
+# उपयोगकर्ता इनपुट टेक्स्ट में सभी क्रियाओं और उनकी स्थिति को मुद्रित करने के लिए पायथन में एक रेगेक्स पैटर्न लिखें
+import re
+text = input("Enter a string: ")
+for m in re.finditer(r"\w+ly", text):
+    print('%02d-%02d: %s' % (m.start(), m.end(), m.group(0)))
+
+# एक सीएसवी फ़ाइल पढ़ने और उसकी सामग्री को प्रिंट करने के लिए एक पायथन फ़ंक्शन लिखें
+def read_csv(filename):
+    import csv
+    with open(filename, newline='') as f:
+        reader = csv.reader(f)
+        for row in reader:
+            print(row)
+
+# सूची को अनुक्रमित टपल में बदलने के लिए एक पायथन स्निपेट लिखें
+test_list = [4, 5, 8, 9, 10] 
+list(zip(range(len(test_list)), test_list))
+
+# शब्द को वर्णों में विभाजित करने के लिए एक पायथन फ़ंक्शन लिखें
+def split(word): 
+    return [char for char in word]
+
+# फ़ाइल में डेटा लेने के लिए एक पायथन फ़ंक्शन लिखें
+def pickle_data(data, pickle_file):
+  import pickle
+  with open(pickle_file, 'wb') as f:
+      pickle.dump(data, f, pickle.HIGHEST_PROTOCOL)
+  return None
+
+# फ़ाइल से अचार डेटा लोड करने के लिए एक पायथन फ़ंक्शन लिखें
+def load_pickle_data(pickle_file):
+  import pickle
+  with open(pickle_file, 'rb') as f:
+      data = pickle.load(f)
+  return data
+
+# एक फ़ंक्शन लिखें जो 2 पुनरावृत्त a और b जोड़ता है जैसे कि a सम है और b विषम है
+def add_even_odd_list(l1:list,l2:list)-> list:
+    return [a+b for a,b in zip(l1,l2) if a%2==0 and b%2!=0]
+
+# एक फ़ंक्शन लिखें जो प्रत्येक स्वर को प्रदान की गई स्ट्रिंग से अलग करता है
+def strip_vowels(input_str:str)->str:
+
+    vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' ]
+    return ''.join(list(filter(lambda x: x not in vowels, input_str)))
+
+# एक फ़ंक्शन लिखें जो 1D सरणी के लिए ReLU फ़ंक्शन की तरह कार्य करता है
+def relu_list(input_list:list)->list:
+    return [(lambda x: x if x >= 0 else 0)(x) for x in input_list]
+
+# एक ऐसा फंक्शन लिखें जो संख्या का फैक्टोरियल उत्पन्न करता है
+def factorial(n):
+    if n == 0 or n ==1:
+        return 1
+    else:
+        return n*factorial(n-1)
+
+# एक फ़ंक्शन लिखें जो सूची की लंबाई लौटाता है
+
+def list_length(l):
+    return len(l)
+
+# एक फ़ंक्शन लिखें जो संख्याओं की सूची को सॉर्ट करता है और शीर्ष तत्व लौटाता है
+
+def biggest_no(l:list)->int:
+    sorted(l)
+
+# एक स्ट्रिंग को n बार दोहराकर प्रिंट करने के लिए एक फंक्शन लिखें
+
+def print_repeatnstring(text:str, n:int)-> str:
+    return text*n
+
+# दो सूचियों को एलिमेंट के अनुसार मर्ज करने के लिए एक फंक्शन लिखें
+
+def merge_lists(l1:list, l2:list):
+    return list(zip(l1,l2))
+
+# दो सूचियों को जोड़ने के लिए एक फंक्शन लिखें
+
+def append_lists(l1:list, l2:list)->list:
+    return l1.extend(l2)
+
+# सूची के विपरीत लौटने के लिए एक फ़ंक्शन लिखें
+
+def reverse_list(l1:list)->list:
+    return l1[::-1]
+
+# तत्ववार दो सूचियों को जोड़ने के लिए एक फ़ंक्शन लिखें
+def adds_listelements(l1:list, l2:list):
+    return [i+j for i, j in zip(l1,l2)]
+
+# तत्व के अनुसार दो सूचियों को घटाने के लिए एक फ़ंक्शन लिखें
+def sub_listelements(l1:list, l2:list):
+    return [i-j for i, j in zip(l1,l2)]
+
+# दो सूचियों को तत्व के अनुसार जोड़ने के लिए एक फ़ंक्शन लिखें, यदि संख्याएँ सम हों
+def adds_listevenelements(l1:list, l2:list):
+    return [i+j for i, j in zip(l1,l2) if i*j%2 == 0]
+
+# संख्या विषम होने पर ही दो सूचियों को तत्ववार गुणा करने के लिए एक फ़ंक्शन लिखें
+def adds_listoddelements(l1:list, l2:list):
+    return [i*j for i, j in zip(l1,l2) if i*j%2 == 1]
+
+# एक ऐसा फ़ंक्शन लिखें जो सूची के तत्वों को n शक्ति वाले तत्वों की सूची लौटाता है
+def n_power(l1:list, power:int)->list:
+    return [i**power for i in l1]
+
+
+# फिबोनैकी श्रृंखला उत्पन्न करने वाला एक फ़ंक्शन लिखें
+def Fibonacci(n:int)-> int:
+    if n==1:
+        fibonacci = 0
+    elif n==2:
+        fibonacci = 1
+    else:
+        fibonacci = Fibonacci(n-1) + Fibonacci(n-2)
+    return fibonacci
+
+
+# एक ऐसा फंक्शन लिखें जो इनपुट का साइन मान लौटाता है
+def sin(x:float) -> float:
+    import math
+    return math.sin(x)
+
+# एक ऐसा फ़ंक्शन लिखें जो इनपुट के साइन वैल्यू का डेरिवेटिव लौटाता है
+def derivative_sin(x:float)-> float:
+    import math
+    return math.cos(x)
+
+# एक ऐसा फंक्शन लिखें जो इनपुट का tan मान देता है
+def tan(x:float) -> float:
+    import math
+    return math.tan(x)
+
+# एक ऐसा फलन लिखिए जो इनपुट के tan मान का अवकलज लौटाता है
+def derivative_tan(x:float)-> float:
+    import math
+    return (1/math.cos(x))**2
+
+
+# एक फ़ंक्शन लिखें जो इनपुट का कोसाइन मान लौटाता है
+def cos(x:float) -> float:
+    import math
+    return math.cos(x)
+
+# एक फ़ंक्शन लिखें जो इनपुट के कोज्या मान का व्युत्पन्न लौटाता है
+def derivative_cos(x:float)-> float:
+    import math
+    return -(math.sin(x))
+
+
+# एक ऐसा फ़ंक्शन लिखें जो इनपुट के घातीय मान को लौटाता है
+def exp(x) -> float:
+    import math
+    return math.exp(x)
+
+# एक फ़ंक्शन लिखें जो x के घातांक का व्युत्पन्न प्राप्त करता है
+def derivative_exp(x:float) -> float:
+    import math
+    return math.exp(x)
+
+
+# एक फ़ंक्शन लिखें जो किसी फ़ंक्शन का लॉग लौटाता है
+def log(x:float)->float:
+    import math
+    return math.log(x)
+
+# एक फ़ंक्शन लिखें जो किसी फ़ंक्शन के लॉग का डेरिवेटिव लौटाता है
+def derivative_log(x:float)->float:
+    return (1/x)
+
+
+# एक ऐसा फंक्शन लिखिए जो इनपुट का Relu मान लौटाता है
+def relu(x:float) -> float:
+    x = 0 if x < 0 else x
+    return x
+
+# एक ऐसा फ़ंक्शन लिखें जो इनपुट के डेरिवेटिव डेरिवेटिव रिले मान लौटाता है
+def derivative_relu(x:float) -> float:
+    x = 1 if x > 0 else 0
+    return x
+
+
+# एक ऐसा फ़ंक्शन लिखें जो कचरा कलेक्टर चलाता है
+def clear_memory():
+    import gc
+    gc.collect()
+
+# एक फ़ंक्शन लिखें जो किसी भी लेनदेन को करने के लिए लिए गए औसत समय की गणना करता है, फ़ंक्शन fn द्वारा पुनरावृत्तियों पर लेनदेन के लिए लिए गए कुल समय का औसत
+def time_it(fn, *args, repetitons= 1, **kwargs):
+    import time
+    total_time = []
+
+    for _ in range(repetitons):
+        start_time = time.perf_counter()
+        fn(*args,**kwargs)
+        end_time = time.perf_counter()
+        ins_time = end_time - start_time
+        total_time.append(ins_time)
+    return sum(total_time)/len(total_time)
+
+
+# डिक्शनरी में वैल्यू मौजूद है या नहीं, यह पहचानने के लिए एक फंक्शन लिखें
+def check_value(d:dict, value)->bool:
+    return any(v == value for v in dict.values())
+
+# एक शब्दकोश के अंदर किसी मान के उदाहरणों की संख्या की गणना करने के लिए पहचानने के लिए एक फ़ंक्शन लिखें
+def count_value(d:dict, value)->bool:
+    return list(v == value for v in dict.values()).count(True)
+
+# किसी सूची के अंदर मूल्य मौजूद है या नहीं, यह पहचानने के लिए एक फ़ंक्शन लिखें
+def check_listvalue(l:list, value)->bool:
+    return value in l
+
+# एक टपल के अंदर मान मौजूद है या नहीं, यह पहचानने के लिए एक फ़ंक्शन लिखें
+def check_tuplevalue(l:tuple, value)->bool:
+    return value in l
+
+# एक फ़ंक्शन लिखें जो लोअरकेस स्ट्रिंग लौटाता है
+def str_lowercase(s:str):
+    return s.lower()
+
+# एक फ़ंक्शन लिखें जो अपरकेस स्ट्रिंग लौटाता है
+def str_uppercase(s:str):
+    return s.upper()
+
+# एक ऐसा फंक्शन लिखें जो सभी विशेष वर्णों को हटा दे
+def clean_str(s):
+    import re
+    return re.sub('[^A-Za-z0-9]+', '', s)
+
+# एक ऐसा फ़ंक्शन लिखें जो आरोही क्रमबद्ध सूची देता है
+def ascending_sort(l:list):
+    sorted(l, reverse=False)
+
+# एक ऐसा फ़ंक्शन लिखें जो अवरोही क्रमबद्ध सूची देता है
+def descending_sort(l:list):
+    sorted(l, reverse=True)
+
+# एक ऐसा फ़ंक्शन लिखें जो इसके मानों के आधार पर क्रमबद्ध एक शब्दकोश लौटाता है
+def descending_dict_valuesort(d:dict):
+    return {key: val for key, val in sorted(d.items(), reverse=True, key = lambda ele: ele[1])}
+
+# एक ऐसा फ़ंक्शन लिखें जो इसके मानों के आधार पर एक शब्दकोश को आरोही क्रम में लौटाता है
+def ascending_dict_valuesort(d:dict):
+    return {key: val for key, val in sorted(d.items(), key = lambda ele: ele[1])}
+
+# एक ऐसा फ़ंक्शन लिखें जो कुंजी द्वारा अवरोही क्रम में एक शब्दकोश लौटाता है
+def descending_dict_keysort(d:dict):
+    return {key: val for key, val in sorted(d.items(), reverse=True, key = lambda ele: ele[0])}
+
+# एक ऐसा फ़ंक्शन लिखें जो कुंजी द्वारा आरोही क्रम में एक शब्दकोश लौटाता है
+def ascending_dict_keysort(d:dict):
+    return {key: val for key, val in sorted(d.items(), key = lambda ele: ele[0])}
+
+# एक फ़ंक्शन लिखें जो प्रदान किए गए मानों के साथ स्ट्रिंग में मानों को प्रतिस्थापित करता है
+def replace_values(s:str, old, new)->str:
+    s.replace(old, new)
+
+# एक फ़ंक्शन लिखें जो सूची के तत्वों में शामिल हो
+def join_elements(l:list)-> str:
+    return (''.join(str(l)))
+
+# स्ट्रिंग के तत्वों को विभाजित करने वाला एक फ़ंक्शन लिखें
+def split_elements(s:str, seperator)-> list:
+    return s.split(seperator)
+
+# एक फ़ंक्शन लिखें जो सूची में सभी तत्वों का योग लौटाता है
+def sum_elements(l:list):
+    return sum(l)
+
+# एक फ़ंक्शन लिखें जो सूची में सभी सम तत्वों का योग लौटाता है
+def sum_even_elements(l:list):
+    return sum([i for i in l if i%2==0])
+
+# एक फ़ंक्शन लिखें जो सूची में सभी विषम तत्वों का योग लौटाता है
+def sum_odd_elements(l:list):
+    return sum([i for i in l if i%2==1])
+
+# किसी सूची को उल्टा करने के लिए एक प्रोग्राम लिखें
+lst = [11, 5, 17, 18, 23]
+def reverse(lst): 
+    new_lst = lst[::-1] 
+    return new_lst
+	
+# सूची में तत्वों का योग खोजने के लिए एक कार्यक्रम लिखें
+list1 = [11, 5, 17, 18, 23]
+total = sum(list1)
+print("Sum of all elements in given list: ", total)
+
+# किसी सूची में सबसे बड़ी संख्या ज्ञात करने के लिए एक प्रोग्राम लिखें
+list1 = [10, 20, 4, 45, 99] 
+list1.sort() 
+print("Largest element is:", list1[-1]) 
+
+# किसी सूची में सम संख्याओं को प्रिंट करने के लिए एक प्रोग्राम लिखें
+list1 = [10, 21, 4, 45, 66, 93] 
+for num in list1: 
+    if num % 2 == 0: 
+       print(num, end = " ") 
+       
+# दिए गए रेंज में नेगेटिव नंबर प्रिंट करने के लिए एक प्रोग्राम लिखें
+start, end = -4, 19
+for num in range(start, end + 1): 
+    if num < 0: 
+        print(num, end = " ") 
+        
+# सूची समझ का उपयोग करके सूची से खाली सूची को हटाने के लिए एक प्रोग्राम लिखें
+test_list = [5, 6, [], 3, [], [], 9] 
+print("The original list is : " + str(test_list)) 
+res = [ele for ele in test_list if ele != []] 
+print ("List after empty list removal : " + str(res)) 
+
+# टुपल्स की सूची से खाली टुपल्स को हटाने के लिए एक प्रोग्राम लिखें
+def Remove(tuples): 
+    tuples = filter(None, tuples) 
+    return tuples 
+  
+tuples = [(), ('ram','15','8'), (), ('laxman', 'sita'),  
+          ('krishna', 'akbar', '45'), ('',''),()] 
+print Remove(tuples)
+
+# एक सूची को आकार N के टुकड़ों में तोड़ने के लिए एक प्रोग्राम लिखें
+l = [1, 2, 3, 4, 5, 6, 7, 8, 9]  
+n = 4 
+x = [l[i:i + n] for i in range(0, len(l), n)]  
+print(x)
+
+# एक स्ट्रिंग में मौजूद शब्दों की आवृत्ति खोजने के लिए एक प्रोग्राम लिखें
+  
+test_str = 'times of india times new india express'
+print("The original string is : " + str(test_str)) 
+
+res = {key: test_str.count(key) for key in test_str.split()} 
+print("The words frequency : " + str(res))
+
+# एक स्ट्रिंग को स्वीकार करने के लिए एक प्रोग्राम लिखें यदि उसमें सभी स्वर हों
+def check(string): 
+  if len(set(string).intersection("AEIOUaeiou"))>=5: 
+    return ('accepted') 
+  else: 
+    return ("not accepted") 
+  
+if __name__=="__main__": 
+  string="helloworld"
+  print(check(string)) 
+  
+
+# d लंबाई द्वारा स्ट्रिंग को बाएँ और दाएँ घुमाने के लिए एक प्रोग्राम लिखें
+def rotate(input,d):  
+  
+    Lfirst = input[0 : d]  
+    Lsecond = input[d :]  
+    Rfirst = input[0 : len(input)-d]  
+    Rsecond = input[len(input)-d : ]  
+  
+    print ("Left Rotation : ", (Lsecond + Lfirst) ) 
+    print ("Right Rotation : ", (Rsecond + Rfirst))  
+  
+if __name__ == "__main__":  
+    input = 'helloworld'
+    d=2
+    rotate(input,d) 
+    
+
+# की-वैल्यू लिस्ट को फ्लैट डिक्शनरी में बदलने के लिए एक प्रोग्राम लिखें
+
+from itertools import product 
+test_dict = {'month' : [1, 2, 3], 
+             'name' : ['Jan', 'Feb', 'March']} 
+  
+print("The original dictionary is : " + str(test_dict)) 
+  
+res = dict(zip(test_dict['month'], test_dict['name'])) 
+print("Flattened dictionary : " + str(res)) 
+
+# डुप्लीकेट शब्दों को हटाने के लिए एक प्रोग्राम लिखें
+s = "Hello world Hello"
+l = s.split() 
+k = [] 
+for i in l: 
+    if (s.count(i)>1 and (i not in k)or s.count(i)==1): 
+        k.append(i) 
+print(' '.join(k)) 
+
+
+# शब्दकोश में बदलने के लिए एक प्रोग्राम लिखें
+def Convert(tup, di): 
+    for a, b in tup: 
+        di.setdefault(a, []).append(b) 
+    return di 
+      
+tups = [("A", 10), ("B", 20), ("C", 30),  
+     ("D", 40), ("E", 50), ("F", 60)] 
+dictionary = {} 
+print (Convert(tups, dictionary)) 
+
+
+# टपल सूची से अंक निकालने के लिए प्रोग्राम लिखें
+from itertools import chain 
+test_list = [(15, 3), (3, 9), (1, 10), (99, 2)] 
+print("The original list is : " + str(test_list)) 
+temp = map(lambda ele: str(ele), chain.from_iterable(test_list)) 
+res = set() 
+for sub in temp: 
+    for ele in sub: 
+        res.add(ele) 
+print("The extrated digits : " + str(res))  
+
+# सूची समझ का उपयोग करके K लंबाई के Tuples को निकालने के लिए एक प्रोग्राम लिखें
+  
+test_list = [(4, 5), (4, ), (8, 6, 7), (1, ), (3, 4, 6, 7)] 
+print("The original list : " + str(test_list)) 
+K = 1
+res = [ele for ele in test_list if len(ele) != K] 
+print("Filtered list : " + str(res)) 
+
+# टपल में अधिकतम और न्यूनतम K तत्वों को खोजने के लिए एक प्रोग्राम लिखें
+test_tup = (5, 20, 3, 7, 6, 8) 
+print("The original tuple is : " + str(test_tup)) 
+K = 2
+test_tup = list(test_tup) 
+temp = sorted(test_tup) 
+res = tuple(temp[:K] + temp[-K:]) 
+print("The extracted values : " + str(res))  
+
+# वर्तमान दिनांक और समय प्राप्त करने के लिए एक प्रोग्राम लिखें
+import datetime  
+current_time = datetime.datetime.now()  
+    
+print ("Time now at greenwich meridian is : " , end = "")  
+print (current_time)
+
+# समय को 12 घंटे से 24 घंटे के प्रारूप में बदलने के लिए एक प्रोग्राम लिखें
+  
+def convert24(str1): 
+      
+    # Checking if last two elements of time 
+    # is AM and first two elements are 12 
+    if str1[-2:] == "AM" and str1[:2] == "12": 
+        return "00" + str1[2:-2] 
+          
+    # remove the AM     
+    elif str1[-2:] == "AM": 
+        return str1[:-2] 
+      
+    # Checking if last two elements of time 
+    # is PM and first two elements are 12    
+    elif str1[-2:] == "PM" and str1[:2] == "12": 
+        return str1[:-2] 
+          
+    else: 
+          
+        # add 12 to hours and remove PM 
+        return str(int(str1[:2]) + 12) + str1[2:8] 
+  
+print(convert24("08:05:45 PM"))   
+
+# दो बार के बीच अंतर खोजने के लिए एक प्रोग्राम लिखें
+  
+  
+def difference(h1, m1, h2, m2): 
+      
+    # convert h1 : m1 into minutes 
+    t1 = h1 * 60 + m1 
+      
+    # convert h2 : m2 into minutes  
+    t2 = h2 * 60 + m2 
+      
+    if (t1 == t2):  
+        print("Both are same times") 
+        return 
+    else: 
+          
+        # calculating the difference 
+        diff = t2-t1 
+          
+    # calculating hours from difference 
+    h = (int(diff / 60)) % 24
+      
+    # calculating minutes from difference 
+    m = diff % 60
+  
+    print(h, ":", m) 
+  
+
+if __name__ == "__main__": 
+      
+    difference(7, 20, 9, 45) 
+    difference(15, 23, 18, 54) 
+    difference(16, 20, 16, 20) 
+    
+# कल, आज और आने वाले कल को खोजने के लिए कार्यक्रम लिखें
+   
+from datetime import datetime, timedelta 
+  
+  
+presentday = datetime.now() # or presentday = datetime.today() 
+  
+yesterday = presentday - timedelta(1) 
+  
+tomorrow = presentday + timedelta(1) 
+  
+  
+print("Yesterday = ", yesterday.strftime('%d-%m-%Y')) 
+print("Today = ", presentday.strftime('%d-%m-%Y')) 
+print("Tomorrow = ", tomorrow.strftime('%d-%m-%Y')) 
+
+# संख्या और अक्षर को छोड़कर सभी वर्णों को हटाने के लिए एक प्रोग्राम लिखें
+  
+import re 
+  
+ini_string = "123abcjw:, .@! eiw"
+  
+	
+print ("initial string : ", ini_string) 
+  
+result = re.sub('[\W_]+', '', ini_string) 
+  
+	
+print ("final string", result) 
+
+# update() विधि का उपयोग करके तानाशाही को मर्ज करने के लिए एक प्रोग्राम लिखें
+def Merge(dict1, dict2):
+    return(dict2.update(dict1))
+     
+
+dict1 = {'a': 10, 'b': 8}
+dict2 = {'d': 6, 'c': 4}
+ 
+print(Merge(dict1, dict2))
+print(dict2)
+
+# एक स्ट्रिंग में सम लंबाई के शब्दों को प्रिंट करने के लिए एक प्रोग्राम लिखें
+  
+def printWords(s): 
+    s = s.split(' ')  
+    for word in s:  
+        if len(word)%2==0: 
+            print(word)  
+
+s = "hello world" 
+printWords(s)
+
+# एक स्ट्रिंग में सभी डुप्लिकेट अक्षरों को हटाने के लिए एक प्रोग्राम लिखें
+
+def removeDuplicate(str): 
+    s=set(str) 
+    s="".join(s) 
+    print("Without Order:",s) 
+    t="" 
+    for i in str: 
+        if(i in t): 
+            pass
+        else: 
+            t=t+i 
+        print("With Order:",t) 
+      
+str="helloworld"
+removeDuplicate(str) 
+
+# स्ट्रिंग में अधिकतम आवृत्ति वर्ण मुद्रित करने के लिए एक प्रोग्राम लिखें
+  
+ 
+test_str = "Helloworld"
+  
+print ("The original string is : " + test_str) 
+  
+all_freq = {} 
+for i in test_str: 
+    if i in all_freq: 
+        all_freq[i] += 1
+    else: 
+        all_freq[i] = 1
+res = max(all_freq, key = all_freq.get)  
+  
+print ("The maximum of all characters in Helloworld is : " + str(res)) 
+
+# यह जांचने के लिए एक प्रोग्राम लिखें कि स्ट्रिंग में कोई विशेष वर्ण है या नहीं
+  
+import re 
+def run(string): 
+  
+    regex = re.compile('[@_!#$%^&*()<>?/\|}{~:]') 
+      
+    if(regex.search(string) == None): 
+        print("String is accepted") 
+          
+    else: 
+        print("String is not accepted.") 
+      
+  
+if __name__ == '__main__' : 
+      
+    # Enter the string 
+    string = "Hello@World"
+      
+    # calling run function  
+    run(string) 
+    
+# एक स्ट्रिंग बाइनरी है या नहीं यह जांचने के लिए एक प्रोग्राम लिखें
+def check(string) : 
+    p = set(string) 
+    s = {'0', '1'} 
+    if s == p or p == {'0'} or p == {'1'}: 
+        print("Yes") 
+    else : 
+        print("No") 
+          
+if __name__ == "__main__" : 
+  
+    string = "101010000111"
+    check(string) 
+   
+# दी गई स्ट्रिंग हेटेरोग्राम है या नहीं, यह जांचने के लिए एक प्रोग्राम लिखें
+  
+def heterogram(input): 
+  
+     alphabets = [ ch for ch in input if ( ord(ch) >= ord('a') and ord(ch) <= ord('z') )] 
+  
+     if len(set(alphabets))==len(alphabets): 
+         print ('Yes') 
+     else: 
+         print ('No') 
+  
+if __name__ == "__main__": 
+    input = 'Hello World'
+    heterogram(input) 
+
+# यह जांचने के लिए एक प्रोग्राम लिखें कि दी गई कुंजी पहले से ही किसी शब्दकोश में मौजूद है या नहीं।
+  
+def checkKey(dict, key): 
+      
+    if key in dict.keys(): 
+        print("Present, ", end =" ") 
+        print("value =", dict[key]) 
+    else: 
+        print("Not present") 
+  
+dict = {'a': 100, 'b':200, 'c':300} 
+  
+key = 'b'
+checkKey(dict, key) 
+  
+key = 'w'
+checkKey(dict, key) 
+
+# स्ट्रिंग पैलिंड्रोम है या नहीं, यह जांचने के लिए एक प्रोग्राम लिखें
+def isPalindrome(s):
+    return s == s[::-1]
+s = "malayalam"
+ans = isPalindrome(s)
+ 
+if ans:
+    print("Yes")
+else:
+    print("No")
+
+# एक प्रोग्राम लिखें जो एक सूची से स्वर से शुरू होने वाले शब्दों को निकालता है
+
+test_list = ["have", "a", "good", "one"] 
+  
+print("The original list is : " + str(test_list)) 
+  
+res = [] 
+vow = "aeiou"
+for sub in test_list: 
+    flag = False
+      
+    # checking for begin char 
+    for ele in vow: 
+        if sub.startswith(ele): 
+            flag = True 
+            break
+    if flag: 
+        res.append(sub) 
+  
+print("The extracted words : " + str(res)) 
+
+# सूची समझ + zip() का उपयोग करके स्वरों को अगले स्वर से बदलने के लिए एक कार्यक्रम लिखें
+  
+test_str = 'helloworld'
+print("The original string is : " + str(test_str)) 
+vow = 'a e i o u'.split() 
+temp = dict(zip(vow, vow[1:] + [vow[0]])) 
+res = "".join([temp.get(ele, ele) for ele in test_str]) 
+print("The replaced string : " + str(res)) 
+
+# स्ट्रिंग के शब्दों को उल्टा करने के लिए एक प्रोग्राम लिखें
+  
+def rev_sentence(sentence):  
+    words = sentence.split(' ')  
+    reverse_sentence = ' '.join(reversed(words))  
+    return reverse_sentence  
+  
+if __name__ == "__main__":  
+    input = 'have a good day'
+    print (rev_sentence(input)) 
+    
+# स्ट्रिंग में कम से कम आवृत्ति वर्ण खोजने के लिए एक प्रोग्राम लिखें
+
+test_str = "helloworld"
+print ("The original string is : " + test_str) 
+all_freq = {} 
+for i in test_str: 
+    if i in all_freq: 
+        all_freq[i] += 1
+    else: 
+        all_freq[i] = 1
+res = min(all_freq, key = all_freq.get)  
+  
+print ("The minimum of all characters in the given word is : " + str(res)) 
+
+# एक सूची में सबसे लगातार तत्व खोजने के लिए एक प्रोग्राम लिखें
+  
+def most_frequent(List): 
+    counter = 0
+    num = List[0] 
+      
+    for i in List: 
+        curr_frequency = List.count(i) 
+        if(curr_frequency> counter): 
+            counter = curr_frequency 
+            num = i 
+  
+    return num 
+  
+List = [2, 1, 2, 2, 1, 3] 
+print(most_frequent(List)) 
+
+# प्रत्येक वर्ण जोड़े के बाद एक प्रोग्राम सम्मिलित वर्ण लिखें
+  
+test_str = "HellowWorld"
+
+print("The original string is : " + test_str) 
+res = ', '.join(test_str[i:i + 2] for i in range(0, len(test_str), 2)) 
+ 
+print("The string after inserting comma after every character pair : " + res) 
+
+# एक स्ट्रिंग से i-th अनुक्रमित वर्ण को हटाने के लिए एक प्रोग्राम लिखें
+  
+def remove(string, i):  
+  
+    a = string[ : i]  
+    b = string[i + 1: ] 
+    return a + b 
+     
+	
+if __name__ == '__main__': 
+      
+    string = "HellowWorld"
+      
+    # Remove nth index element 
+    i = 5
+    
+    # Print the new string 
+    print(remove(string, i)) 
+
+# एक स्ट्रिंग में कम से कम एक अक्षर और एक संख्या है या नहीं, यह जांचने के लिए एक प्रोग्राम लिखें
+def checkString(str): 
+    
+    flag_l = False
+    flag_n = False
+      
+    for i in str: 
+        
+        # if string has letter 
+        if i.isalpha(): 
+            flag_l = True
+  
+        # if string has number 
+        if i.isdigit(): 
+            flag_n = True
+      
+    return flag_l and flag_n 
+  
+  
+
+print(checkString('helloworld')) 
+print(checkString('helloworld2020'))
+
+# एक कार्यक्रम लिखें कम से कम आवृत्ति तत्व निकालें
+
+from collections import defaultdict 
+test_list = [1, 3, 4, 5, 1, 3, 5] 
+  
+ 
+print("The original list : " + str(test_list)) 
+  
+
+res = defaultdict(int) 
+for ele in test_list: 
+   res[ele] += 1 
+min_occ = 9999
+for ele in res: 
+    if min_occ > res[ele]: 
+        min_occ = res[ele] 
+        tar_ele = ele 
+  
+
+print("The minimum occurring element is : " + str(tar_ele)) 
+
+# 2 सूचियों की जाँच करने के लिए एक प्रोग्राम लिखें और पता करें कि क्या कोई तत्व सामान्य है
+  
+def common_data(list1, list2): 
+    result = False
+  
+    for x in list1: 
+  
+        # traverse in the 2nd list 
+        for y in list2: 
+    
+            # if one common 
+            if x == y: 
+                result = True
+                return result  
+                  
+    return result 
+      
+
+a = [1, 2, 3, 4, 5] 
+b = [5, 6, 7, 8, 9] 
+print(common_data(a, b)) 
+  
+a = [1, 2, 3, 4, 5] 
+b = [6, 7, 8, 9] 
+print(common_data(a, b)) 
+
+# त्रिभुज का क्षेत्रफल ज्ञात करने के लिए एक प्रोग्राम लिखिए
+
+a = float(input('Enter first side: '))  
+b = float(input('Enter second side: '))  
+c = float(input('Enter third side: '))  
+  
+s = (a + b + c) / 2  
+  
+area = (s*(s-a)*(s-b)*(s-c)) ** 0.5  
+print('The area of the triangle is %0.2f' %area)   
+
+# दो वेरिएबल्स को स्वैप करने के लिए एक प्रोग्राम लिखें
+x = input('Enter value of x: ')  
+y = input('Enter value of y: ')  
+  
+temp = x  
+x = y  
+y = temp  
+ 
+print('The value of x after swapping: {}'.format(x))  
+print('The value of y after swapping: {}'.format(y)) 
+
+# किलोमीटर को मील में बदलने के लिए एक प्रोग्राम लिखें
+
+kilometers = float(input('How many kilometers?: '))  
+conv_fac = 0.621371  
+miles = kilometers * conv_fac  
+print('%0.3f kilometers is equal to %0.3f miles' %(kilometers,miles))  
+
+# सेल्सियस को फारेनहाइट में बदलने के लिए एक प्रोग्राम लिखें
+
+celsius = float(input('Enter temperature in Celsius: '))  
+fahrenheit = (celsius * 1.8) + 32  
+print('%0.1f  Celsius is equal to %0.1f degree Fahrenheit'%(celsius,fahrenheit))  
+
+# कैलेंडर प्रदर्शित करने के लिए एक प्रोग्राम लिखें
+
+import calendar  
+yy = int(input("Enter year: "))  
+mm = int(input("Enter month: "))  
+  
+print(calendar.month(yy,mm))  
+
+# यह जाँचने के लिए एक प्रोग्राम लिखें कि क्या वर्ष लीप वर्ष है
+
+year = int(input("Enter a year: "))  
+if (year % 4) == 0:  
+   if (year % 100) == 0:  
+       if (year % 400) == 0:  
+           print("{0} is a leap year".format(year))  
+       else:  
+           print("{0} is not a leap year".format(year))  
+   else:  
+       print("{0} is a leap year".format(year))  
+else:  
+   print("{0} is not a leap year".format(year))  
+   
+# संख्या एक अभाज्य संख्या है या नहीं, यह जांचने के लिए एक प्रोग्राम लिखें
+
+num = int(input("Enter a number: "))  
+  
+if num > 1:  
+   for i in range(2,num):  
+       if (num % i) == 0:  
+           print(num,"is not a prime number")  
+           print(i,"times",num//i,"is",num)  
+           break  
+   else:  
+       print(num,"is a prime number")  
+         
+else:  
+   print(num,"is not a prime number")  
+   
+# अंतराल के बीच सभी अभाज्य संख्याओं को प्रिंट करने के लिए एक प्रोग्राम लिखें
+
+lower = int(input("Enter lower range: "))  
+upper = int(input("Enter upper range: "))  
+  
+for num in range(lower,upper + 1):  
+   if num > 1:  
+       for i in range(2,num):  
+           if (num % i) == 0:  
+               break  
+       else:  
+           print(num)  
+           
+# किसी संख्या का भाज्य ज्ञात करने के लिए एक प्रोग्राम लिखें
+
+num = int(input("Enter a number: "))  
+factorial = 1  
+if num < 0:  
+   print("Sorry, factorial does not exist for negative numbers")  
+elif num == 0:  
+   print("The factorial of 0 is 1")  
+else:  
+   for i in range(1,num + 1):  
+       factorial = factorial*i  
+   print("The factorial of",num,"is",factorial) 
+   
+# किसी संख्या की गुणन तालिका प्रदर्शित करने के लिए एक प्रोग्राम लिखें
+
+num = int(input("Show the multiplication table of? "))  
+	
+for i in range(1,11):  
+   print(num,'x',i,'=',num*i)  
+   
+# फाइबोनैचि अनुक्रम को प्रिंट करने के लिए एक प्रोग्राम लिखें
+
+nterms = int(input("How many terms you want? "))  
+
+n1 = 0  
+n2 = 1  
+count = 2  
+if nterms <= 0:  
+   print("Plese enter a positive integer")  
+elif nterms == 1:  
+   print("Fibonacci sequence:")  
+   print(n1)  
+else:  
+   print("Fibonacci sequence:")  
+   print(n1,",",n2,end=', ')  
+   while count < nterms:  
+       nth = n1 + n2  
+       print(nth,end=' , ')  
+       # update values  
+       n1 = n2  
+       n2 = nth  
+       count += 1  
+       
+# आर्मस्ट्रांग नंबर की जांच के लिए एक प्रोग्राम लिखें
+
+num = int(input("Enter a number: "))  
+sum = 0  
+temp = num  
+  
+while temp > 0:  
+   digit = temp % 10  
+   sum += digit ** 3  
+   temp //= 10  
+  
+if num == sum:  
+   print(num,"is an Armstrong number")  
+else:  
+   print(num,"is not an Armstrong number")  
+   
+# अन्तराल में आर्मस्ट्रांग संख्या ज्ञात करने के लिए एक प्रोग्राम लिखिए
+
+lower = int(input("Enter lower range: "))  
+upper = int(input("Enter upper range: "))  
+  
+for num in range(lower,upper + 1):  
+   sum = 0  
+   temp = num  
+   while temp > 0:  
+       digit = temp % 10  
+       sum += digit ** 3  
+       temp //= 10  
+       if num == sum:  
+            print(num)  
+            
+# प्राकृतिक संख्याओं का योग ज्ञात करने के लिए एक प्रोग्राम लिखें
+
+num = int(input("Enter a number: "))  
+  
+if num < 0:  
+   print("Enter a positive number")  
+else:  
+   sum = 0  
+   # use while loop to iterate un till zero  
+   while(num > 0):  
+       sum += num  
+       num -= 1  
+   print("The sum is",sum)  
+
+# एलसीएम खोजने के लिए एक कार्यक्रम लिखें
+
+def lcm(x, y):  
+   if x > y:  
+       greater = x  
+   else:  
+       greater = y  
+  while(True):  
+       if((greater % x == 0) and (greater % y == 0)):  
+           lcm = greater  
+           break  
+       greater += 1  
+   return lcm  
+  
+  
+num1 = int(input("Enter first number: "))  
+num2 = int(input("Enter second number: "))  
+print("The L.C.M. of", num1,"and", num2,"is", lcm(num1, num2)) 
+
+# एचसीएफ खोजने के लिए एक कार्यक्रम लिखें
+
+def hcf(x, y):  
+   if x > y:  
+       smaller = y  
+   else:  
+       smaller = x  
+   for i in range(1,smaller + 1):  
+       if((x % i == 0) and (y % i == 0)):  
+           hcf = i  
+   return hcf  
+  
+num1 = int(input("Enter first number: "))  
+num2 = int(input("Enter second number: "))  
+print("The H.C.F. of", num1,"and", num2,"is", hcf(num1, num2))  
+
+# दशमलव को बाइनरी, ऑक्टल और हेक्साडेसिमल में बदलने के लिए एक प्रोग्राम लिखें
+dec = int(input("Enter a decimal number: "))  
+  
+print(bin(dec),"in binary.")  
+print(oct(dec),"in octal.")  
+print(hex(dec),"in hexadecimal."  
+
+# पायथन कार्यक्रम एक चरित्र के एएससीआई मूल्य खोजने के लिए
+
+c = input("Enter a character: ")  
+print("The ASCII value of '" + c + "' is",ord(c))
+
+# एक साधारण कैलकुलेटर बनाने के लिए एक प्रोग्राम लिखें
+
+
+def add(x, y):  
+   """This function adds two numbers"""
+   return x + y 
+def subtract(x, y): 
+   """This function subtracts two numbers""" 
+   return x - y 
+def multiply(x, y): 
+   """This function multiplies two numbers""" 
+   return x * y 
+def divide(x, y): 
+   """This function divides two numbers"""  
+   return x / y  
+print("Select operation.")  
+print("1.Add")  
+print("2.Subtract")  
+print("3.Multiply")  
+print("4.Divide")  
+  
+choice = input("Enter choice(1/2/3/4):")  
+  
+num1 = int(input("Enter first number: "))  
+num2 = int(input("Enter second number: "))  
+  
+if choice == '1':  
+   print(num1,"+",num2,"=", add(num1,num2))  
+  
+elif choice == '2':  
+   print(num1,"-",num2,"=", subtract(num1,num2))  
+  
+elif choice == '3':  
+   print(num1,"*",num2,"=", multiply(num1,num2))  
+elif choice == '4':  
+   print(num1,"/",num2,"=", divide(num1,num2))  
+else:  
+   print("Invalid input")    
+   
+# शब्दों को वर्णानुक्रम में क्रमबद्ध करने के लिए एक प्रोग्राम लिखें
+
+my_str = input("Enter a string: ")  
+
+words = my_str.split()  
+
+words.sort()  
+
+for word in words:  
+   print(word)  
+   
+# नेस्टेड लूप का उपयोग करके दो मैट्रिसेस जोड़ने के लिए एक प्रोग्राम लिखें
+
+X = [[12,7,3],
+    [4 ,5,6],
+    [7 ,8,9]]
+
+Y = [[5,8,1],
+    [6,7,3],
+    [4,5,9]]
+
+result = [[0,0,0],
+         [0,0,0],
+         [0,0,0]]
+
+for i in range(len(X)):
+   # iterate through columns
+   for j in range(len(X[0])):
+       result[i][j] = X[i][j] + Y[i][j]
+
+for r in result:
+   print(r)  
+
+# नेस्टेड लूप का उपयोग करके मैट्रिक्स को स्थानांतरित करने के लिए एक प्रोग्राम लिखें
+
+X = [[12,7],
+    [4 ,5],
+    [3 ,8]]
+
+result = [[0,0,0],
+         [0,0,0]]
+
+
+for i in range(len(X)):
+   # iterate through columns
+   for j in range(len(X[0])):
+       result[j][i] = X[i][j]
+
+for r in result:
+   print(r)  
+
+# नेस्टेड लूप का उपयोग करके दो आव्यूहों को गुणा करने के लिए एक प्रोग्राम लिखें
+
+
+X = [[12,7,3],
+    [4 ,5,6],
+    [7 ,8,9]]
+
+Y = [[5,8,1,2],
+    [6,7,3,0],
+    [4,5,9,1]]
+
+result = [[0,0,0,0],
+         [0,0,0,0],
+         [0,0,0,0]]
+
+
+for i in range(len(X)):
+
+   for j in range(len(Y[0])):
+
+       for k in range(len(Y)):
+           result[i][j] += X[i][k] * Y[k][j]
+
+for r in result:
+   print(r)   
+   
+# एक स्ट्रिंग से विराम चिह्न हटाने के लिए एक प्रोग्राम लिखें
+
+punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+
+my_str = "Hello!!!, he said ---and went."
+
+no_punct = ""
+for char in my_str:
+   if char not in punctuations:
+       no_punct = no_punct + char
+
+print(no_punct)
+
+# ताश की गड्डी को फेरने के लिए एक प्रोग्राम लिखें
+
+import itertools, random
+
+deck = list(itertools.product(range(1,14),['Spade','Heart','Diamond','Club']))
+random.shuffle(deck)
+
+print("You got:")
+for i in range(5):
+   print(deck[i][0], "of", deck[i][1])
+   
+# अनाम फ़ंक्शन का उपयोग करके 2 की शक्तियों को प्रदर्शित करने के लिए एक प्रोग्राम लिखें
+
+terms = 10
+result = list(map(lambda x: 2 ** x, range(terms)))
+
+print("The total terms are:",terms)
+for i in range(terms):
+   print("2 raised to power",i,"is",result[i])
+
+# 2 बाइनरी नंबर जोड़ने के लिए एक प्रोग्राम लिखें
+
+num1 = '00001'
+num2 = '10001'
+
+sum = bin(int(num1,2) + int(num2,2))
+print(sum)
+
+# साधारण ब्याज खोजने के लिए एक प्रोग्राम लिखें
+
+p = float(input("Enter the principle amount : "))
+r = float(input("Enter the rate of interest : "))
+t = float(input("Enter the time in the years: "))
+
+si = (p*r*t)/100
+
+print("Principle amount: ", p)
+print("Interest rate   : ", r)
+print("Time in years   : ", t)
+print("Simple Interest : ", si)
+
+# चक्रवृद्धि ब्याज खोजने के लिए एक कार्यक्रम लिखें
+
+p = float(input("Enter the principle amount : "))
+r = float(input("Enter the rate of interest : "))
+t = float(input("Enter the time in the years: "))
+
+ci =  p * (pow((1 + r / 100), t)) 
+
+print("Principle amount  : ", p)
+print("Interest rate     : ", r)
+print("Time in years     : ", t)
+print("compound Interest : ", ci)
+
+# सितारों (*) के पैटर्न को प्रिंट करने के लिए एक प्रोग्राम लिखें
+
+for row in range (0,5):
+    for column in range (0, row+1):
+        print ("*", end="")
+
+    # ending row
+    print('\r')
+    
+# पायथन में निरपेक्ष मान वापस करने के लिए एक प्रोग्राम लिखें
+
+def get_absolute_value(n):
+	if n >= 0:
+		return n
+	else:
+		return -n
+
+print(get_absolute_value(101))
+
+# किसी संख्या की शक्ति ज्ञात करने के लिए एक प्रोग्राम लिखें
+
+a = 10
+b = 3
+
+result = a**b
+
+print (a, " to the power of ", b, " is = ", result)
+
+# 1 से N तक की संख्याओं के बाइनरी मान को प्रिंट करने के लिए एक प्रोग्राम लिखें
+
+n = int(input("Enter the value of N: "))
+
+for i in range(1, n+1):
+    print("Binary value of ", i, " is: ", bin(i))
+    
+# बाइनरी में एक पूर्णांक का प्रतिनिधित्व करने के लिए आवश्यक बिट्स की संख्या खोजने के लिए एक प्रोग्राम लिखें
+
+num = int(input("Enter an integer number: "))
+
+bits = num.bit_length()
+
+print("bits required to store ", num, " = ", bits)
+print("binary value of ", num, " is = ", bin(num))
+
+# 2 सूचियों के बीच अंतर खोजने के लिए एक प्रोग्राम लिखें
+
+list1 = [10, 20, 30, 40, 50]
+list2 = [10, 20, 30, 60, 70]
+
+print "list1:", list1
+print "list2:", list2
+
+print "Difference elements:"
+print (list (set(list1) - set (list2)))
+
+# एक सूची में निर्दिष्ट सूचकांक पर एक तत्व जोड़ने के लिए एक प्रोग्राम लिखें
+
+list = [10, 20, 30]
+print (list)
+list.insert (1, "ABC")
+print (list)
+list.insert (3, "PQR")
+print (list)
+
+# एक स्ट्रिंग की सम लंबाई वाले शब्दों को प्रिंट करने के लिए एक प्रोग्राम लिखें
+str = "Python is a programming language"
+
+words = list(str.split(' '))
+
+print "str: ", str
+print "list converted string: ", words
+print "EVEN length words:"
+for W in words:
+	if(len(W)%2==0 ):
+		print W
+        
+# किसी दिए गए स्ट्रिंग की N कॉपी बनाने के लिए एक प्रोग्राम लिखें
+
+str1 = "Hello"
+n = 3
+
+str2 = str1 * 3 
+
+print "str1: ", str1 
+print "str2: ", str2
+
+# पायथन में दिए गए स्ट्रिंग से मोबाइल नंबर निकालने के लिए एक प्रोग्राम लिखें
+
+import re
+
+string='''hello you can call me at 018002089898.'''
+
+Phonenumber=re.compile(r'\d\d\d\d\d\d\d\d\d\d\d\d')
+m=Phonenumber.search(string)
+
+print('mobile number found from the string : ',m.group())
+
+# एक स्ट्रिंग में प्रत्येक शब्द के पहले अक्षर को कैपिटलाइज़ करने के लिए एक प्रोग्राम लिखें
+
+def capitalize(text):
+  return text.title()
+
+str1 = "Hello world!"
+str2 = "hello world!"
+str3 = "HELLO WORLD!"
+str4 = "includehelp.com is a tutorials site"
+
+print("str1: ", str1)
+print("str2: ", str2)
+print("str3: ", str3)
+print("str4: ", str4)
+print()
+
+# डाइस थ्रो फंक्शन को डिजाइन करने के लिए एक प्रोग्राम लिखें
+
+import random
+
+def dice():
+    return random.choice([1,2,3,4,5,6])
+    
+# पूर्णांकों की दी गई सूची से पूर्ण संख्याओं को प्रिंट करने के लिए एक प्रोग्राम लिखिए
+
+def checkPerfectNum(n) :
+	i = 2;sum = 1;
+
+	while(i <= n//2 ) :
+		if (n % i == 0) :
+			sum += i			
+		
+		i += 1
+		if sum == n :
+			print(n,end=' ')
+
+if __name__ == "__main__" :
+
+	print("Enter list of integers: ")
+	list_of_intgers = list(map(int,input().split()))
+
+	print("Given list of integers:",list_of_intgers)
+
+	print("Perfect numbers present in the list is: ")
+	for num in list_of_intgers :
+		checkPerfectNum(num)
+        
+# मीटर को गज में बदलने के लिए एक प्रोग्राम लिखिए
+num = float(input("Enter the distance measured in centimeter : "))
+
+inc = num/2.54 
+print("Distance in inch : ", inc)
+
+# हनोई का एक प्रोग्राम टॉवर लिखें
+
+def hanoi(x):
+    global repN
+    repN += 1
+    if x == 1:
+        return 2
+    
+    else:
+        return 3*hanoi(x-1) + 2
+    
+x = int(input("ENTER THE NUMBER OF DISKS: "))
+
+global repN
+repN =0
+
+print('NUMBER OF STEPS: ', hanoi(x), ' :', repN)
+
+# डेटासेट के विचरण को खोजने के लिए एक प्रोग्राम लिखें
+
+def variance(X):
+    mean = sum(X)/len(X)
+    tot = 0.0
+    for x in X:
+        tot = tot + (x - mean)**2
+    return tot/len(X)
+
+ 
+sample = [1, 2, 3, 4, 5] 
+print("variance of the sample is: ", variance(sample))
+
+# दिन के विजेता को खोजने के लिए एक प्रोग्राम लिखें
+
+def find_winner_of_the_day(*match_tuple):
+    team1_count = 0
+    team2_count = 0
+     
+    for team_name in match_tuple :
+         
+        if team_name == "Team1" :
+            team1_count += 1
+        else :
+            team2_count += 1
+             
+    if team1_count == team2_count :
+        return "Tie"
+         
+    elif team1_count > team2_count :
+        return "Team1"
+     
+    else :
+        return "Team2"
+     
+     
+if __name__ == "__main__" :
+     
+    print(find_winner_of_the_day("Team1","Team2","Team1"))
+    print(find_winner_of_the_day("Team1","Team2","Team1","Team2"))
+    print(find_winner_of_the_day("Team1","Team2","Team2","Team1","Team2"))
+    
+# तीसरे चर के बिना दो पूर्णांकों के मान की अदला-बदली के लिए एक प्रोग्राम लिखें
+
+x = int(input("Enter the value of x :"))
+y = int(input("Enter the value of y :"))
+
+(x,y) = (y,x)
+
+print('Value of x: ', x, '\nValue of y: ', y, '\nWOO!! Values SWAPPEDDD')
+
+# मतदान के लिए योग्यता जांचने के लिए एक प्रोग्राम लिखें
+
+age = int(input("Enter Age : "))
+
+if age>=18:
+        status="Eligible"
+else:
+    status="Not Eligible"
+
+print("You are ",status," for Vote.")
+
+# संस्करण जानकारी मुद्रित करने के लिए एक प्रोग्राम लिखें
+
+import sys
+
+print("Python version: ", sys.version)
+print("Python version info: ", sys.version_info)
+
+# किसी संख्या के सभी अंकों का योग ज्ञात करने के लिए एक प्रोग्राम लिखें
+
+def sumDigits(num):
+  if num == 0:
+    return 0
+  else:
+    return num % 10 + sumDigits(int(num / 10))
+
+x = 0
+print("Number: ", x)
+print("Sum of digits: ", sumDigits(x))
+print()
+
+# स्ट्रिंग चर के साथ दोहरे उद्धरण चिह्नों को प्रिंट करने के लिए एक प्रोग्राम लिखें
+str1 = "Hello world";
+
+print("\"%s\"" % str1)
+print('"%s"' % str1)
+print('"{}"'.format(str1))
+
+# आईपी ​​​​एड्रेस से अग्रणी शून्य हटाने के लिए एक प्रोग्राम लिखें
+
+import re
+def removeLeadingZeros(ip):
+    modified_ip = re.sub(regex, '.', ip)
+    print(modified_ip)
+
+
+if __name__ == '__main__' : 
+	
+	ip = "216.08.094.196"
+	removeLeadingZeros(ip)
+
+# बाइनरी सर्च के लिए एक प्रोग्राम लिखें
+
+def binary_search(l, num_find):
+
+    start = 0
+    end = len(l) - 1
+    mid = (start + end) // 2
+    
+    found = False
+    position = -1
+
+    while start <= end:
+        if l[mid] == num_find:
+            found = True
+            position = mid
+            break
+        
+        if num_find > l[mid]:
+            start = mid + 1
+            mid = (start + end) // 2
+        else:
+            end = mid - 1
+            mid = (start + end) // 2
+
+    return (found, position)
+
+if __name__=='__main__':
+    
+    l = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    num = 6
+    found = binary_search(l, num)
+    if found[0]:
+        print('Number %d found at position %d'%(num, found[1]+1))
+    else:
+        print('Number %d not found'%num)
+        
+# एक फ़ाइल की विषम पंक्तियों को दूसरी फ़ाइल में कॉपी करने के लिए एक प्रोग्राम लिखें
+
+file1 = open('file1.txt', 'r') 
+file2 = open('file2.txt', 'w') 
+
+lines = file1.readlines() 
+type(lines) 
+for i in range(0, len(lines)): 
+	if(i % 2 != 0): 
+		file2.write(lines[i]) 
+
+file1.close()
+file2.close() 
+
+file1 = open('file1.txt', 'r') 
+file2 = open('file2.txt', 'r') 
+
+str1 = file1.read()
+str2 = file2.read()
+
+print("file1 content...")
+print(str1)
+
+print() # to print new line
+
+print("file2 content...")
+print(str2)
+
+file1.close()
+file2.close()
+
+# पायथन में अंक वाले स्ट्रिंग को उलटने के लिए एक प्रोग्राम लिखें
+
+def reverse(n):
+    s=str(n) 
+    p=s[::-1]
+    return p 
+
+num = int(input('Enter a positive value: '))
+print('The reverse integer:',reverse(num))
+
+# एक स्ट्रिंग इनपुट करने के लिए एक प्रोग्राम लिखें और कुल संख्या अपरकेस और लोअरकेस अक्षर खोजें
+
+print("Input a string: ")
+str1 = input()
+
+no_of_ucase, no_of_lcase = 0,0
+
+for c in str1:
+    if c>='A' and c<='Z':
+        no_of_ucase += 1
+    if c>='a' and c<='z':
+        no_of_lcase += 1
+
+print("Input string is: ", str1)
+print("Total number of uppercase letters: ", no_of_ucase)
+print("Total number of lowercase letters: ", no_of_lcase)
+
+# एक स्ट्रिंग इनपुट करने के लिए एक प्रोग्राम लिखें और अक्षरों और अंकों की कुल संख्या ज्ञात करें
+
+print("Input a string: ")
+str1 = input()
+
+no_of_letters, no_of_digits = 0,0
+
+for c in str1:
+    if (c>='a' and c<='z') or (c>='A' and c<='Z'):
+        no_of_letters += 1
+    if c>='0' and c<='9':
+        no_of_digits += 1
+
+print("Input string is: ", str1)
+print("Total number of letters: ", no_of_letters)
+print("Total number of digits: ", no_of_digits)
+
+# हनोई के टावर को लागू करने के लिए एक पायथन फ़ंक्शन लिखें
+
+def hanoi(disks, source, auxiliary, target):
+    if disks == 1:
+        print('Move disk 1 from peg {} to peg {}.'.format(source, target))
+        return
+ 
+    hanoi(disks - 1, source, target, auxiliary)
+    print('Move disk {} from peg {} to peg {}.'.format(disks, source, target))
+    hanoi(disks - 1, auxiliary, source, target)
+
+
+# एक क्यू का उपयोग करके स्टैक को लागू करने के लिए एक पायथन प्रोग्राम लिखें
+
+class Stack:
+    def __init__(self):
+        self.q = Queue()
+ 
+    def is_empty(self):
+        return self.q.is_empty()
+ 
+    def push(self, data):
+        self.q.enqueue(data)
+ 
+    def pop(self):
+        for _ in range(self.q.get_size() - 1):
+            dequeued = self.q.dequeue()
+            self.q.enqueue(dequeued)
+        return self.q.dequeue()
+ 
+ 
+class Queue:
+    def __init__(self):
+        self.items = []
+        self.size = 0
+ 
+    def is_empty(self):
+        return self.items == []
+ 
+    def enqueue(self, data):
+        self.size += 1
+        self.items.append(data)
+ 
+    def dequeue(self):
+        self.size -= 1
+        return self.items.pop(0)
+ 
+    def get_size(self):
+        return self.size
+ 
+ 
+s = Stack()
+ 
+print('Menu')
+print('push <value>')
+print('pop')
+print('quit')
+ 
+while True:
+    do = input('What would you like to do? ').split()
+ 
+    operation = do[0].strip().lower()
+    if operation == 'push':
+        s.push(int(do[1]))
+    elif operation == 'pop':
+        if s.is_empty():
+            print('Stack is empty.')
+        else:
+            print('Popped value: ', s.pop())
+    elif operation == 'quit':
+        break
+
+# डेक्यू को लागू करने के लिए एक पायथन प्रोग्राम लिखें
+
+class Dequeue:
+    def __init__(self):
+        self.items = []
+ 
+    def is_empty(self):
+        return self.items == []
+ 
+    def append(self, data):
+        self.items.append(data)
+ 
+    def append_left(self, data):
+        self.items.insert(0, data)
+ 
+    def pop(self):
+        return self.items.pop()
+ 
+    def pop_left(self):
+        return self.items.pop(0)
+ 
+ 
+q = Dequeue()
+print('Menu')
+print('append <value>')
+print('appendleft <value>')
+print('pop')
+print('popleft')
+print('quit')
+ 
+while True:
+    do = input('What would you like to do? ').split()
+ 
+    operation = do[0].strip().lower()
+    if operation == 'append':
+        q.append(int(do[1]))
+    elif operation == 'appendleft':
+        q.append_left(int(do[1]))
+    elif operation == 'pop':
+        if q.is_empty():
+            print('Dequeue is empty.')
+        else:
+            print('Popped value from right: ', q.pop())
+    elif operation == 'popleft':
+        if q.is_empty():
+            print('Dequeue is empty.')
+        else:
+            print('Popped value from left: ', q.pop_left())
+    elif operation == 'quit':
+        break
+
+# यदि स्टैक का उपयोग करके स्ट्रिंग पैलिंड्रोम है तो जांचने और प्रिंट करने के लिए एक पायथन प्रोग्राम लिखें
+
+class Stack:
+    def __init__(self):
+        self.items = []
+ 
+    def is_empty(self):
+        return self.items == []
+ 
+    def push(self, data):
+        self.items.append(data)
+ 
+    def pop(self):
+        return self.items.pop()
+ 
+ 
+s = Stack()
+text = "ABA"
+ 
+for character in text:
+    s.push(character)
+ 
+reversed_text = ''
+while not s.is_empty():
+    reversed_text = reversed_text + s.pop()
+ 
+if text == reversed_text:
+    print('The string is a palindrome.')
+else:
+    print('The string is not a palindrome.')
+
+# स्टैक का उपयोग करके अभिव्यक्ति को सही ढंग से संश्लेषित किया गया है या नहीं, इसकी जांच और प्रिंट करने के लिए एक पायथन प्रोग्राम लिखें
+
+class Stack:
+    def __init__(self):
+        self.items = []
+ 
+    def is_empty(self):
+        return self.items == []
+ 
+    def push(self, data):
+        self.items.append(data)
+ 
+    def pop(self):
+        return self.items.pop()
+ 
+ 
+s = Stack()
+exp = "(x+y"
+ 
+for c in exp:
+    if c == '(':
+        s.push(1)
+    elif c == ')':
+        if s.is_empty():
+            is_balanced = False
+            break
+        s.pop()
+else:
+    if s.is_empty():
+        is_balanced = True
+    else:
+        is_balanced = False
+ 
+if is_balanced:
+    print('Expression is correctly parenthesized.')
+else:
+    print('Expression is not correctly parenthesized.')
+
+# रैखिक खोज को लागू करने के लिए एक पायथन प्रोग्राम लिखें और यदि कुंजी तत्व मिल जाए तो उसे प्रिंट करें
+
+def linear_search(alist, key):
+    """Return index of key in alist. Return -1 if key not present."""
+    for i in range(len(alist)):
+        if alist[i] == key:
+            return i
+    return -1
+ 
+ 
+alist = [2, 3, 5, 6, 4, 5]
+
+key = 6
+ 
+index = linear_search(alist, key)
+if index < 0:
+    print(f'{key} was not found.')
+else:
+    print(f'{key} was found at index {index}.')
+
+# रिकर्सन के बिना बाइनरी सर्च को लागू करने के लिए एक पायथन प्रोग्राम लिखें और यदि कुंजी तत्व मिल जाए तो उसे प्रिंट करें
+
+def binary_search(alist, key):
+    """Search key in alist[start... end - 1]."""
+    start = 0
+    end = len(alist)
+    while start < end:
+        mid = (start + end)//2
+        if alist[mid] > key:
+            end = mid
+        elif alist[mid] < key:
+            start = mid + 1
+        else:
+            return mid
+    return -1
+ 
+ 
+alist = [2, 3, 5, 6, 4, 5]
+
+key = 6
+ 
+index = binary_search(alist, key)
+if index < 0:
+    print(f'{key} was not found.')
+else:
+    print(f'{key} was found at index {index}.')
+
+
+# पुनरावर्तन के साथ बाइनरी खोज को लागू करने के लिए एक पायथन प्रोग्राम लिखें और यदि कुंजी तत्व मिल जाए तो उसे प्रिंट करें
+
+def binary_search_rec(alist, start, end, key):
+    """Search key in alist[start... end - 1]."""
+    if not start < end:
+        return -1
+ 
+    mid = (start + end)//2
+    if alist[mid] < key:
+        return binary_search_rec(alist, mid + 1, end, key)
+    elif alist[mid] > key:
+        return binary_search_rec(alist, start, mid, key)
+    else:
+        return mid
+ 
+ 
+alist = [2, 3, 5, 6, 4, 5]
+
+key = 6
+ 
+index = binary_search_rec(alist, 0, len(alist), key)
+if index < 0:
+    print(f'{key} was not found.')
+else:
+    print(f'{key} was found at index {index}.')
+
+
+# बबल सॉर्ट को लागू करने के लिए एक पायथन प्रोग्राम लिखें और नीचे दी गई सूची के लिए सॉर्ट की गई सूची को प्रिंट करें
+
+def bubble_sort(alist):
+    for i in range(len(alist) - 1, 0, -1):
+        no_swap = True
+        for j in range(0, i):
+            if alist[j + 1] < alist[j]:
+                alist[j], alist[j + 1] = alist[j + 1], alist[j]
+                no_swap = False
+        if no_swap:
+            return
+ 
+ 
+alist = [2, 3, 5, 6, 4, 5]
+bubble_sort(alist)
+print('Sorted list: ', end='')
+print(alist)
+
+# चयन प्रकार को लागू करने के लिए एक पायथन प्रोग्राम लिखें और नीचे दी गई सूची के लिए क्रमबद्ध सूची को प्रिंट करें
+
+def selection_sort(alist):
+    for i in range(0, len(alist) - 1):
+        smallest = i
+        for j in range(i + 1, len(alist)):
+            if alist[j] < alist[smallest]:
+                smallest = j
+        alist[i], alist[smallest] = alist[smallest], alist[i]
+ 
+ 
+alist = [2, 3, 5, 6, 4, 5]
+selection_sort(alist)
+print('Sorted list: ', end='')
+print(alist)
+
+# इंसर्शन सॉर्ट लागू करने के लिए एक पायथन प्रोग्राम लिखें और नीचे दी गई सूची के लिए सॉर्ट की गई सूची को प्रिंट करें
+
+def insertion_sort(alist):
+    for i in range(1, len(alist)):
+        temp = alist[i]
+        j = i - 1
+        while (j >= 0 and temp < alist[j]):
+            alist[j + 1] = alist[j]
+            j = j - 1
+        alist[j + 1] = temp
+ 
+ 
+alist = [2, 3, 5, 6, 4, 5]
+insertion_sort(alist)
+print('Sorted list: ', end='')
+print(alist)
+
+# मर्ज सॉर्ट लागू करने के लिए एक पायथन प्रोग्राम लिखें और नीचे दी गई सूची के लिए सॉर्ट की गई सूची को प्रिंट करें
+
+def merge_sort(alist, start, end):
+    '''Sorts the list from indexes start to end - 1 inclusive.'''
+    if end - start > 1:
+        mid = (start + end)//2
+        merge_sort(alist, start, mid)
+        merge_sort(alist, mid, end)
+        merge_list(alist, start, mid, end)
+ 
+def merge_list(alist, start, mid, end):
+    left = alist[start:mid]
+    right = alist[mid:end]
+    k = start
+    i = 0
+    j = 0
+    while (start + i < mid and mid + j < end):
+        if (left[i] <= right[j]):
+            alist[k] = left[i]
+            i = i + 1
+        else:
+            alist[k] = right[j]
+            j = j + 1
+        k = k + 1
+    if start + i < mid:
+        while k < end:
+            alist[k] = left[i]
+            i = i + 1
+            k = k + 1
+    else:
+        while k < end:
+            alist[k] = right[j]
+            j = j + 1
+            k = k + 1
+ 
+ 
+alist = [2, 3, 5, 6, 4, 5]
+merge_sort(alist, 0, len(alist))
+print('Sorted list: ', end='')
+print(alist)
+
+# क्विकसॉर्ट को लागू करने के लिए एक पायथन प्रोग्राम लिखें और नीचे दी गई सूची के लिए क्रमबद्ध सूची को प्रिंट करें
+
+def quicksort(alist, start, end):
+    '''Sorts the list from indexes start to end - 1 inclusive.'''
+    if end - start > 1:
+        p = partition(alist, start, end)
+        quicksort(alist, start, p)
+        quicksort(alist, p + 1, end)
+ 
+ 
+def partition(alist, start, end):
+    pivot = alist[start]
+    i = start + 1
+    j = end - 1
+ 
+    while True:
+        while (i <= j and alist[i] <= pivot):
+            i = i + 1
+        while (i <= j and alist[j] >= pivot):
+            j = j - 1
+ 
+        if i <= j:
+            alist[i], alist[j] = alist[j], alist[i]
+        else:
+            alist[start], alist[j] = alist[j], alist[start]
+            return j
+ 
+ 
+alist = [2, 3, 5, 6, 4, 5]
+quicksort(alist, 0, len(alist))
+print('Sorted list: ', end='')
+print(alist)
+
+# हीप्सोर्ट को लागू करने के लिए एक पायथन प्रोग्राम लिखें और नीचे दी गई सूची के लिए क्रमबद्ध सूची को प्रिंट करें
+
+def heapsort(alist):
+    build_max_heap(alist)
+    for i in range(len(alist) - 1, 0, -1):
+        alist[0], alist[i] = alist[i], alist[0]
+        max_heapify(alist, index=0, size=i)
+ 
+def parent(i):
+    return (i - 1)//2
+ 
+def left(i):
+    return 2*i + 1
+ 
+def right(i):
+    return 2*i + 2
+ 
+def build_max_heap(alist):
+    length = len(alist)
+    start = parent(length - 1)
+    while start >= 0:
+        max_heapify(alist, index=start, size=length)
+        start = start - 1
+ 
+def max_heapify(alist, index, size):
+    l = left(index)
+    r = right(index)
+    if (l < size and alist[l] > alist[index]):
+        largest = l
+    else:
+        largest = index
+    if (r < size and alist[r] > alist[largest]):
+        largest = r
+    if (largest != index):
+        alist[largest], alist[index] = alist[index], alist[largest]
+        max_heapify(alist, largest, size)
+ 
+ 
+alist = [2, 3, 5, 6, 4, 5]
+heapsort(alist)
+print('Sorted list: ', end='')
+print(alist)
+
+# काउंटिंग सॉर्ट लागू करने के लिए एक पायथन प्रोग्राम लिखें और नीचे दी गई सूची के लिए सॉर्ट की गई सूची को प्रिंट करें
+
+def counting_sort(alist, largest):
+    c = [0]*(largest + 1)
+    for i in range(len(alist)):
+        c[alist[i]] = c[alist[i]] + 1
+ 
+    c[0] = c[0] - 1 
+    for i in range(1, largest + 1):
+        c[i] = c[i] + c[i - 1]
+ 
+    result = [None]*len(alist)
+ 
+    for x in reversed(alist):
+        result[c[x]] = x
+        c[x] = c[x] - 1
+ 
+    return result
+ 
+ 
+alist = [2, 3, 5, 6, 4, 5]
+k = max(alist)
+sorted_list = counting_sort(alist, k)
+print('Sorted list: ', end='')
+print(sorted_list)
+
+# रेडिक्स सॉर्ट को लागू करने के लिए एक पायथन प्रोग्राम लिखें और नीचे दी गई सूची के लिए सॉर्ट की गई सूची को प्रिंट करें
+
+def radix_sort(alist, base=10):
+    if alist == []:
+        return
+ 
+    def key_factory(digit, base):
+        def key(alist, index):
+            return ((alist[index]//(base**digit)) % base)
+        return key
+    largest = max(alist)
+    exp = 0
+    while base**exp <= largest:
+        alist = counting_sort(alist, base - 1, key_factory(exp, base))
+        exp = exp + 1
+    return alist
+ 
+def counting_sort(alist, largest, key):
+    c = [0]*(largest + 1)
+    for i in range(len(alist)):
+        c[key(alist, i)] = c[key(alist, i)] + 1
+ 
+    c[0] = c[0] - 1
+    for i in range(1, largest + 1):
+        c[i] = c[i] + c[i - 1]
+ 
+    result = [None]*len(alist)
+    for i in range(len(alist) - 1, -1, -1):
+        result[c[key(alist, i)]] = alist[i]
+        c[key(alist, i)] = c[key(alist, i)] - 1
+ 
+    return result
+ 
+alist = [2, 3, 5, 6, 4, 5]
+sorted_list = radix_sort(alist)
+print('Sorted list: ', end='')
+print(sorted_list)
+
+# बकेट सॉर्ट को लागू करने के लिए एक पायथन प्रोग्राम लिखें और नीचे दी गई सूची के लिए सॉर्ट की गई सूची को प्रिंट करें
+
+def bucket_sort(alist):
+    largest = max(alist)
+    length = len(alist)
+    size = largest/length
+ 
+    buckets = [[] for _ in range(length)]
+    for i in range(length):
+        j = int(alist[i]/size)
+        if j != length:
+            buckets[j].append(alist[i])
+        else:
+            buckets[length - 1].append(alist[i])
+ 
+    for i in range(length):
+        insertion_sort(buckets[i])
+ 
+    result = []
+    for i in range(length):
+        result = result + buckets[i]
+ 
+    return result
+ 
+def insertion_sort(alist):
+    for i in range(1, len(alist)):
+        temp = alist[i]
+        j = i - 1
+        while (j >= 0 and temp < alist[j]):
+            alist[j + 1] = alist[j]
+            j = j - 1
+        alist[j + 1] = temp
+ 
+ 
+alist = [2, 3, 5, 6, 4, 5]
+sorted_list = bucket_sort(alist)
+print('Sorted list: ', end='')
+print(sorted_list)
+
+# गनोम सॉर्ट को लागू करने के लिए एक पायथन प्रोग्राम लिखें और नीचे दी गई सूची के लिए सॉर्ट की गई सूची को प्रिंट करें
+
+def gnome_sort(alist):
+    for pos in range(1, len(alist)):
+        while (pos != 0 and alist[pos] < alist[pos - 1]):
+            alist[pos], alist[pos - 1] = alist[pos - 1], alist[pos]
+            pos = pos - 1
+ 
+ 
+alist = [2, 3, 5, 6, 4, 5]
+gnome_sort(alist)
+print('Sorted list: ', end='')
+print(alist)
+
+# कॉकटेल शेकर सॉर्ट लागू करने के लिए एक पायथन प्रोग्राम लिखें और नीचे दी गई सूची के लिए सॉर्ट की गई सूची को प्रिंट करें
+
+def cocktail_shaker_sort(alist):
+    def swap(i, j):
+        alist[i], alist[j] = alist[j], alist[i]
+ 
+    upper = len(alist) - 1
+    lower = 0
+ 
+    no_swap = False
+    while (not no_swap and upper - lower > 1):
+        no_swap = True
+        for j in range(lower, upper):
+            if alist[j + 1] < alist[j]:
+                swap(j + 1, j)
+                no_swap = False
+        upper = upper - 1
+ 
+        for j in range(upper, lower, -1):
+            if alist[j - 1] > alist[j]:
+                swap(j - 1, j)
+                no_swap = False
+        lower = lower + 1
+ 
+ 
+alist = [2, 3, 5, 6, 4, 5]
+cocktail_shaker_sort(alist)
+print('Sorted list: ', end='')
+print(alist)
+
+# कॉम्ब सॉर्ट लागू करने के लिए एक पायथन प्रोग्राम लिखें और नीचे दी गई सूची के लिए सॉर्ट की गई सूची को प्रिंट करें
+
+def comb_sort(alist):
+    def swap(i, j):
+        alist[i], alist[j] = alist[j], alist[i]
+ 
+    gap = len(alist)
+    shrink = 1.3
+ 
+    no_swap = False
+    while not no_swap:
+        gap = int(gap/shrink)
+ 
+        if gap < 1:
+            gap = 1
+            no_swap = True
+        else:
+            no_swap = False
+ 
+        i = 0
+        while i + gap < len(alist):
+            if alist[i] > alist[i + gap]:
+                swap(i, i + gap)
+                no_swap = False
+            i = i + 1
+ 
+ 
+alist = [2, 3, 5, 6, 4, 5]
+comb_sort(alist)
+print('Sorted list: ', end='')
+print(alist)
+
+# शेल सॉर्ट को लागू करने के लिए एक पायथन प्रोग्राम लिखें और नीचे दी गई सूची के लिए सॉर्ट की गई सूची को प्रिंट करें
+
+def gaps(size):
+    length = size.bit_length()
+    for k in range(length - 1, 0, -1):
+        yield 2**k - 1
+ 
+ 
+def shell_sort(alist):
+    def insertion_sort_with_gap(gap):
+        for i in range(gap, len(alist)):
+            temp = alist[i]
+            j = i - gap
+            while (j >= 0 and temp < alist[j]):
+                alist[j + gap] = alist[j]
+                j = j - gap
+            alist[j + gap] = temp
+ 
+    for g in gaps(len(alist)):
+        insertion_sort_with_gap(g)
+ 
+ 
+alist = [2, 3, 5, 6, 4, 5]
+shell_sort(alist)
+print('Sorted list: ', end='')
+print(alist)
+
+# एक आयत के क्षेत्रफल की गणना करने और क्षेत्र को प्रिंट करने के लिए एक पायथन वर्ग लिखें
+
+class rectangle():
+    def __init__(self,breadth,length):
+        self.breadth=breadth
+        self.length=length
+    def area(self):
+        return self.breadth*self.length
+a=6
+b=4
+obj=rectangle(a,b)
+print("Area of rectangle:",obj.area())
+
+# एक वृत्त के क्षेत्रफल की गणना करने के लिए एक पायथन वर्ग लिखें और एक त्रिज्या के लिए घाटी को प्रिंट करें
+
+class CircleArea():
+    def __init__(self,radius):
+        self.radius=radius
+    def area(self):
+        return 3.14 * self.radius * self.radius
+a=6
+obj=CircleArea(a)
+print("Area of rectangle:",obj.area())
+
+# एक वृत्त की परिधि की गणना करने के लिए एक पायथन वर्ग लिखें और एक त्रिज्या के लिए घाटी को प्रिंट करें
+
+class CirclePerimeter():
+    def __init__(self,radius):
+        self.radius=radius
+    def perimeter(self):
+        return 2 * 3.14 * self.radius
+a=6
+obj=CirclePerimeter(a)
+print("Perimeter of rectangle:",obj.perimeter())
+
+# विशिष्ट पूर्णांकों के एक सेट से सभी संभावित सबसेट को प्रिंट करने के लिए एक पायथन वर्ग लिखें
+
+class sub:  
+    def f1(self, s1):  
+        return self.f2([], sorted(s1))  
+ 
+    def f2(self, curr, s1):  
+        if s1:  
+            return self.f2(curr, s1[1:]) + self.f2(curr + [s1[0]], s1[1:])  
+        return [curr]  
+a=[2, 3, 5, 6, 4, 5]
+
+print("Subsets: ")
+print(sub().f1(a))
+
+# फ़ाइल की सामग्री को पढ़ने और प्रिंट करने के लिए एक पायथन प्रोग्राम लिखें
+
+a=str(input("Enter file name .txt extension:"))
+file2=open(a,'r')
+line=file2.readline()
+while(line!=""):
+    print(line)
+    line=file2.readline()
+file2.close()
+
+# टेक्स्ट फ़ाइल में शब्दों की संख्या गिनने और प्रिंट करने के लिए एक पायथन प्रोग्राम लिखें
+
+fname = input("Enter file name: ")
+ 
+num_words = 0
+ 
+with open(fname, 'r') as f:
+    for line in f:
+        words = line.split()
+        num_words += len(words)
+print("Number of words:")
+print(num_words)
+
+# पाठ फ़ाइल में पंक्तियों की संख्या गिनने के लिए एक पायथन प्रोग्राम लिखें
+
+fname = input("Enter file name: ")
+num_lines = 0
+with open(fname, 'r') as f:
+    for line in f:
+        num_lines += 1
+print("Number of lines:")
+print(num_lines)
+
+# पाठ फ़ाइल में किसी शब्द की घटनाओं की गणना करने के लिए एक पायथन प्रोग्राम लिखें
+
+fname = input("Enter file name: ")
+word='the'
+k = 0
+ 
+with open(fname, 'r') as f:
+    for line in f:
+        words = line.split()
+        for i in words:
+            if(i==word):
+                k=k+1
+print(f"Frequency of Occurrences of the word {a} is:")
+print(k)
+
+# एक फ़ाइल की सामग्री को दूसरे में कॉपी करने के लिए एक पायथन फ़ंक्शन लिखें
+
+def copy(from_file, to_file):
+    with open(from_file) as f:
+        with open(to_file, "w") as f1:
+            for line in f:
+                f1.write(line)
+
+# एक पायथन फ़ंक्शन लिखें जो पाठ फ़ाइल में एक निश्चित पत्र प्रकट होने की संख्या की संख्या की गणना करता है
+def count_letter(fname, l):
+    k = 0
+    with open(fname, 'r') as f:
+        for line in f:
+            words = line.split()
+            for i in words:
+                for letter in i:
+                    if(letter==l):
+                        k=k+1
+    return k
+
+# एक पायथन फ़ंक्शन लिखें जो टेक्स्ट फ़ाइल में मौजूद सभी नंबरों को प्रिंट करता है
+
+def print_number(fname):
+    with open(fname, 'r') as f:
+        for line in f:
+            words = line.split()
+            for i in words:
+                for letter in i:
+                    if(letter.isdigit()):
+                        print(letter)
+
+
+# एक टेक्स्ट फ़ाइल में रिक्त स्थान की संख्या की गणना करने वाला एक पायथन फ़ंक्शन लिखें
+
+def count_blank_space(fname):
+    k = 0
+    with open(fname, 'r') as f:
+        for line in f:
+            words = line.split()
+            for i in words:
+                for letter in i:
+                    if(letter.isspace):
+                        k=k+1
+    return k
+
+# एक पायथन फ़ंक्शन लिखें जो फ़ाइल में प्रत्येक शब्द के पहले अक्षर को कैपिटलाइज़ करता है
+
+def capitalize(fname):
+    with open(fname, 'r') as f:
+        for line in f:
+            l=line.title()
+            print(l)
+
+# एक पायथन फ़ंक्शन लिखें जो फ़ाइल की सामग्री को रिवर्स ऑर्डर में प्रिंट करता है
+
+def reverse_content(filename):
+    for line in reversed(list(open(filename))):
+        print(line.rstrip())
+
+# सूची को समतल करने और प्रिंट करने के लिए एक पायथन प्रोग्राम लिखें
+
+a=[[1,[[2]],[[[3]]]],[[4],5]]
+flatten=lambda l: sum(map(flatten,l),[]) if isinstance(l,list) else [l]
+print(flatten(a))
+
+# दो नंबरों का एलसीएम प्रिंट करने के लिए एक पायथन प्रोग्राम लिखें
+
+def lcm(a,b):
+    lcm.multiple=lcm.multiple+b
+    if((lcm.multiple % a == 0) and (lcm.multiple % b == 0)):
+        return lcm.multiple
+    else:
+        lcm(a, b)
+    return lcm.multiple
+lcm.multiple=0
+a=4
+b=7
+if(a>b):
+    LCM=lcm(b,a)
+else:
+    LCM=lcm(a,b)
+
+print(LCM)
+
+# दो नंबरों के जीसीडी को प्रिंट करने के लिए एक पायथन फ़ंक्शन लिखें
+
+def gcd(a,b):
+    if(b==0):
+        return a
+    else:
+        return gcd(b,a%b)
+
+
+# कोई संख्या अभाज्य है या नहीं, यह जानने के लिए एक पायथन फ़ंक्शन लिखें
+
+def check(n, div = None):
+    if div is None:
+        div = n - 1
+    while div >= 2:
+        if n % div == 0:
+            print("Number not prime")
+            return False
+        else:
+            return check(n, div-1)
+    else:
+        print("Number is prime")
+        return 'True'
+
+# रिकर्सन का उपयोग करके किसी संख्या की शक्ति ज्ञात करने के लिए एक पायथन फ़ंक्शन लिखें
+
+def power(base,exp):
+    if(exp==1):
+        return(base)
+    if(exp!=1):
+        return(base*power(base,exp-1))
+
+# पुनरावर्तन का उपयोग करके नेस्टेड सूची का कुल योग ज्ञात करने के लिए एक पायथन फ़ंक्शन लिखें
+
+def sum1(lst):
+    total = 0
+    for element in lst:
+        if (type(element) == type([])):
+            total = total + sum1(element)
+        else:
+            total = total + element
+    return total
+
+# सेट का उपयोग करके एक स्ट्रिंग में मौजूद स्वरों की संख्या को गिनने और प्रिंट करने के लिए एक पायथन फ़ंक्शन लिखें
+
+def count_vowels(s):
+    count = 0
+    vowels = set("aeiou")
+    for letter in s:
+        if letter in vowels:
+            count += 1
+    return count
+
+# दो इनपुट स्ट्रिंग्स में सामान्य अक्षरों को प्रिंट करने के लिए एक पायथन प्रोग्राम लिखें
+
+s1='python'
+s2='schoolofai'
+a=list(set(s1)&set(s2))
+print("The common letters are:")
+for i in a:
+    print(i)
+
+# एक पायथन प्रोग्राम लिखें जो प्रिंट करता है कि कौन से अक्षर पहले स्ट्रिंग में हैं लेकिन दूसरे में नहीं
+
+s1='python'
+s2='schoolofai'
+a=list(set(s1)-set(s2))
+print("The letters are:")
+for i in a:
+    print(i)
+
+# दो शब्दकोशों को एक में जोड़ने के लिए एक पायथन प्रोग्राम लिखें
+
+def concat_dic(d1, d2):
+    return d1.update(d2)
+
+# शब्दकोश में सभी वस्तुओं को गुणा करने के लिए एक पायथन प्रोग्राम लिखें
+
+def mul_dict(d):
+    tot=1
+    for i in d:    
+        tot=tot*d[i]
+    return tot
+
+# किसी डिक्शनरी से दी गई कुंजी को निकालने के लिए एक पायथन प्रोग्राम लिखें
+
+def remove_item_dict(d, key):
+    if key in d: 
+        del d[key]
+    else:
+        print("Key not found!")
+        exit(0)
+
+# एक शब्दकोश में दो सूचियों को मैप करने के लिए एक पायथन प्रोग्राम लिखें
+
+def map_dict(keys, values):
+    return dict(zip(keys,values))
+
+# नॉन-एम्प्टी स्ट्रिंग से nth इंडेक्स कैरेक्टर को हटाने के लिए एक पायथन प्रोग्राम लिखें
+
+def remove(string, n):  
+      first = string[:n]   
+      last = string[n+1:]  
+      return first + last
+
+# यह पता लगाने के लिए एक पायथन प्रोग्राम लिखें कि क्या दो स्ट्रिंग एनाग्राम हैं
+
+def anagram_check(s1, s2):
+    if(sorted(s1)==sorted(s2)):
+        return True
+    else:
+        return False
+
+# एक नया स्ट्रिंग बनाने के लिए एक पायथन प्रोग्राम लिखें जहां पहले कैरेक्टर और आखिरी कैरेक्टर का आदान-प्रदान किया गया हो
+
+def change(string):
+      return string[-1:] + string[1:-1] + string[:1]
+
+# एक स्ट्रिंग में विषम सूचकांक मानों के वर्णों को हटाने के लिए एक पायथन प्रोग्राम लिखें
+
+def modify(string):  
+    final = ""   
+    for i in range(len(string)):  
+        if i % 2 == 0:  
+            final = final + string[i]  
+    return final
+
+# दो स्ट्रिंग लेने और बड़ी स्ट्रिंग प्रिंट करने के लिए एक पायथन प्रोग्राम लिखें
+
+string1='python'
+string2='theschoolofai'
+count1=0
+count2=0
+for i in string1:
+      count1=count1+1
+for j in string2:
+      count2=count2+1
+if(count1<count2):
+      print("Larger string is:")
+      print(string2)
+elif(count1==count2):
+      print("Both strings are equal.")
+else:
+      print("Larger string is:")
+      print(string1)
+
+# एक स्ट्रिंग में लोअरकेस वर्णों की संख्या गिनने और प्रिंट करने के लिए एक पायथन प्रोग्राम लिखें
+
+string='This is an Assignment'
+count=0
+for i in string:
+      if(i.islower()):
+            count=count+1
+print("The number of lowercase characters is:")
+print(count)
+
+# एक सूची में सम और विषम तत्वों को दो अलग-अलग सूचियों में रखने के लिए एक पायथन प्रोग्राम लिखें
+
+a=[2, 3, 8, 9, 2, 4, 6]
+even=[]
+odd=[]
+for j in a:
+    if(j%2==0):
+        even.append(j)
+    else:
+        odd.append(j)
+print("The even list",even)
+print("The odd list",odd)
+
+# सबलिस्ट में दूसरे तत्व के अनुसार सूची को क्रमबद्ध करने के लिए एक पायथन प्रोग्राम लिखें
+
+a=[['A',34],['B',21],['C',26]]
+for i in range(0,len(a)):
+    for j in range(0,len(a)-i-1):
+        if(a[j][1]>a[j+1][1]):
+            temp=a[j]
+            a[j]=a[j+1]
+            a[j+1]=temp
+
+
+# बबल सॉर्ट का उपयोग करके सूची में दूसरी सबसे बड़ी संख्या खोजने के लिए एक पायथन प्रोग्राम लिखें
+
+a=[2, 3, 8, 9, 2, 4, 6]
+for i in range(0,len(a)):
+    for j in range(0,len(a)-i-1):
+        if(a[j]>a[j+1]):
+            temp=a[j]
+            a[j]=a[j+1]
+            a[j+1]=temp 
+
+# दो सूचियों के प्रतिच्छेदन को खोजने के लिए एक पायथन प्रोग्राम लिखें
+
+def main(alist, blist):
+    def intersection(a, b):
+        return list(set(a) & set(b))
+    return intersection(alist, blist)
+
+# सूची समझ का उपयोग करके नंबर के वर्ग के रूप में पहले तत्व और दूसरे तत्व के रूप में पहले तत्व के साथ टुपल्स की सूची बनाने के लिए एक पायथन प्रोग्राम लिखें
+
+l_range=2
+u_range=5
+a=[(x,x**2) for x in range(l_range,u_range+1)]
+
+
+# एक रेंज में सभी नंबरों को प्रिंट करने के लिए एक पायथन प्रोग्राम लिखें जो कि परफेक्ट स्क्वायर हैं और संख्या में सभी अंकों का योग 10 से कम है
+
+l=6
+u=9
+a=[x for x in range(l,u+1) if (int(x**0.5))**2==x and sum(list(map(int,str(x))))<10]
+print(a)
+
+# किसी सूची के प्रथम और अंतिम मान की अदला-बदली करने के लिए Python प्रोग्राम लिखें
+
+a=[2, 3, 8, 9, 2, 4, 6]
+n = len(a)
+temp=a[0]
+a[0]=a[n-1]
+a[n-1]=temp
+print("New list is:")
+print(a)
+
+# सूची से डुप्लिकेट आइटम निकालने और प्रिंट करने के लिए एक पायथन प्रोग्राम लिखें
+
+a=[2, 3, 8, 9, 2, 4, 6]
+b = set()
+unique = []
+for x in a:
+    if x not in b:
+        unique.append(x)
+        b.add(x)
+print("Non-duplicate items:")
+print(unique)
+
+# शब्दों की सूची पढ़ने और सबसे लंबे शब्द की लंबाई वापस करने के लिए एक पायथन प्रोग्राम लिखें
+
+a=['the', 'tsai', 'python']
+max1=len(a[0])
+temp=a[0]
+for i in a:
+    if(len(i)>max1):
+       max1=len(i)
+       temp=i
+print("The word with the longest length is:")
+print(temp)
+
+# एक सूची में दिए गए शब्द की ith घटना को हटाने के लिए एक पायथन प्रोग्राम लिखें जहां शब्द दोहराए जा सकते हैं
+
+a=['the', 'tsai', 'python' ,'a' ,'the', 'a']
+c=[]
+count=0
+b='a'
+n=3
+for i in a:
+    if(i==b):
+        count=count+1
+        if(count!=n):
+            c.append(i)
+    else:
+        c.append(i)
+if(count==0):
+    print("Item not found ")
+else: 
+    print("The number of repetitions is: ",count)
+    print("Updated list is: ",c)
+    print("The distinct elements are: ",set(a))
+
+
+# एक सूची में अजीब संख्या में आने वाले तत्व को खोजने के लिए एक पायथन फ़ंक्शन लिखें
+
+def find_odd_occurring(alist):
+    """Return the element that occurs odd number of times in alist.
+ 
+    alist is a list in which all elements except one element occurs an even
+    number of times.
+    """
+    ans = 0
+ 
+    for element in alist:
+        ans ^= element
+ 
+    return ans
+
+# यह जाँचने के लिए एक पायथन प्रोग्राम लिखें कि क्या कोई तिथि मान्य है और यदि यह है तो बढ़ी हुई तिथि को प्रिंट करें
+
+date="20/04/2021"
+dd,mm,yy=date.split('/')
+dd=int(dd)
+mm=int(mm)
+yy=int(yy)
+if(mm==1 or mm==3 or mm==5 or mm==7 or mm==8 or mm==10 or mm==12):
+    max1=31
+elif(mm==4 or mm==6 or mm==9 or mm==11):
+    max1=30
+elif(yy%4==0 and yy%100!=0 or yy%400==0):
+    max1=29
+else:
+    max1=28
+if(mm<1 or mm>12):
+    print("Date is invalid.")
+elif(dd<1 or dd>max1):
+    print("Date is invalid.")
+elif(dd==max1 and mm!=12):
+    dd=1
+    mm=mm+1
+    print("The incremented date is: ",dd,mm,yy)
+elif(dd==31 and mm==12):
+    dd=1
+    mm=1
+    yy=yy+1
+    print("The incremented date is: ",dd,mm,yy)
+else:
+    dd=dd+1
+    print("The incremented date is: ",dd,mm,yy)
